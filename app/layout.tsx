@@ -5,7 +5,6 @@ import { Open_Sans } from 'next/font/google'
 import Footer from './components/layout/Footer'
 import './public/assets/fonts/stylesheet.css'
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,7 +19,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className="h-[100vh] relative">
                 {children}
                 <Footer />
             </body>
