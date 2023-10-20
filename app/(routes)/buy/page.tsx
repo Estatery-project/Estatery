@@ -5,7 +5,7 @@ import { cookies } from 'next/headers'
 async function getData() {
     const name = cookies().get('name')?.value
     name && data.push({ id: data.length + 1, name: name })
-    return data;
+    return data
 }
 
 const page = async () => {
