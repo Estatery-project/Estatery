@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="h-[100vh] relative">
+            <body className={inter.className}>
                 {children}
                 <Footer />
             </body>

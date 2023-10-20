@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
     return (
-        <section className="flex justify-center items-center   mx-auto absolute  bottom-0 w-full">
+        <section className="flex justify-center items-center   mx-auto relative  bottom-0 w-full ">
             <footer className="container flex flex-col justify-center items-center  ">
                 <div className="flex justify-between w-full py-20">
                     <div className="">
@@ -113,7 +113,9 @@ const Footer = () => {
                 <hr className="border-[1px] w-full absolute bottom-16 border-[#E8E6F9]" />
 
                 <div className="flex container justify-between ">
-                    <div className='opacity-[0.5] text-[#000929] font-[500]'>©2021 Estatery. All rights reserved</div>
+                    <div className="opacity-[0.5] text-[#000929] font-[500]">
+                        ©2021 Estatery. All rights reserved
+                    </div>
                     <div className="flex justify-between w-[216px] pb-5">
                         <FacebookIcon className="opacity-[0.5]" />
                         <TwitterIcon className="opacity-[0.5]" />
