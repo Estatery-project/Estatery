@@ -8,6 +8,7 @@ async function getData() {
     return data
 }
 
+
 const page = async () => {
     const data = await getData()
     return (
