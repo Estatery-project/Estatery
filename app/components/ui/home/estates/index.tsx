@@ -12,7 +12,7 @@ import EstateCard from '../../estateCard'
 
 const HomeEstates = () => {
     return (
-        <section className=" bg-custom-gradient-estates ">
+        <section className="bg-custom-gradient-estates ">
             <div className="container mx-auto ">
                 {/* HOME PAGE ESTATE TITLE */}
                 <div className="flex justify-between items-center pb-16">

@@ -8,7 +8,6 @@ import {
     HeartLogo,
 } from '@/app/public/assets/icons/icons'
 
-
 const EstateCard = () => {
     return (
         <div className="text-[#000929]">
