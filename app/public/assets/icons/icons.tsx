@@ -1187,6 +1187,33 @@ const HomeHeroIcon = () => {
     )
 }
 
+const ArrowRigtIcon = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+        >
+            <g clip-path="url(#clip0_338_12920)">
+                <path
+                    d="M7.5 5L12.5 10L7.5 15"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </g>
+            <defs>
+                <clipPath id="clip0_338_12920">
+                    <rect width="20" height="20" fill="white" />
+                </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
 export {
     MainLogo,
     FacebookIcon,
@@ -1205,4 +1232,5 @@ export {
     SeacrhIcon,
     ChartLinesIcon,
     HomeHeroIcon,
+    ArrowRigtIcon,
 }

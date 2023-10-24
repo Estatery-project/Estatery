@@ -25,8 +25,9 @@ const HomeContact = () => {
                         <Button
                             type="submit"
                             className="bg-[#7065F0] text-[#fff]  right-3 top-[20%] px-[40px] py-[12px] rounded-[8px] absolute"
-                            content={'Submit'}
-                        />
+                        >
+                            Submit
+                        </Button>
                     </div>
                 </form>
                 <p className="text-[#D3D5DA] ">

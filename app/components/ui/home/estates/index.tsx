@@ -25,11 +25,9 @@ const HomeEstates = () => {
                         </p>
                     </div>
                     <div>
-                        <Button
-                            type="button"
-                            content="Browse more properties"
-                            className="bg-[#7065F0] text-[#fff] rounded-[8px] px-8 py-4 text-4 font-[700]"
-                        />
+                        <Button type="button" className="px-8 py-4">
+                            Browse more properties
+                        </Button>
                     </div>
                 </div>
 
