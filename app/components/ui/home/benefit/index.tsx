@@ -19,8 +19,7 @@ const Benefit = () => {
                             properties listed.
                         </p>
                     </div>
-
-                    <div className="flex items-center gap-8">
+                    <div className="flex  gap-8 items-center">
                         <div className="flex flex-col items-center">
                             <InComeToRentIcon />
                             <h4 className="text-[#000929] text-2xl font-bold leading-9 mt-4">
