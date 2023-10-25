@@ -26,12 +26,13 @@ body {
 
 @layer utilities {
     .bg-custom-gradient-index {
-      background: linear-gradient(180deg, #F0EFFB 0%, rgba(255, 255, 255, 0.00) 100%);
-      
+        background: linear-gradient(
+            180deg,
+            #f0effb 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
     }
-    .bg-custom-gradient-estates{
-        background: linear-gradient(180deg, #FFF 0%, #F0EFFB 100%);
-
-
+    .bg-custom-gradient-estates {
+        background: linear-gradient(180deg, #fff 0%, #f0effb 100%);
     }
-  }
+}
