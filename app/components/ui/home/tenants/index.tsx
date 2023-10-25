@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import HomeImage from '../../../../public/assets/images/Home-1.png'
-import Button from '../../Button'
+// import Button from '../../Button'
+import { Button } from 'primereact/button'
 
 import {
     ArrowRigtIcon,
@@ -23,10 +24,7 @@ const Tenants = () => {
                 </figure>
 
                 <div className="flex flex-col gap-8 px-[40px]">
-                    <div>
-                        <Button>For tenants</Button>
-                    </div>
-
+                    <div></div>
                     <h2 className="text-[#000929] text-[40px] font-bold">
                         We make it easy for tenants and landlords.
                     </h2>
@@ -36,9 +34,10 @@ const Tenants = () => {
                         efficient. The best part? you’ll save a bunch of money
                         and time with our services.
                     </p>
-                    <Button className="py-3 px-6 flex items-center self-start gap-2 ">
+                    {/* <Button className="py-3 px-6 flex items-center self-start gap-2 ">
                         See more <ArrowRigtIcon />
-                    </Button>
+                    </Button> */}
+                    <Button label="Click Me" />
                 </div>
             </div>
         </section>

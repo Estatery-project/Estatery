@@ -7,7 +7,7 @@ import './public/assets/fonts/stylesheet.css'
 //theme
 import 'primereact/resources/themes/lara-light-indigo/theme.css'
 
-import { PrimeReactProvider } from 'primereact/api'
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,12 +23,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
-                <PrimeReactProvider>
+            <PrimeReactProvider>
+                <body className={inter.className}>
                     {children}
                     <Footer />
-                </PrimeReactProvider>
-            </body>
+                </body>
+            </PrimeReactProvider>
         </html>
     )
 }
