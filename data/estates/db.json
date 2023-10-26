@@ -1,0 +1,130 @@
+{
+    "estates": [
+        {
+            "id": 2,
+            "price": 280000,
+            "title": "Scenic Mountain Cabin",
+            "location": "789 Pine Rd, Mountainside, USA",
+            "bedroom": 3,
+            "bathroom": 2,
+            "area": "1800 sqft",
+            "type": "buy",
+            "isPopular": false,
+            "baseImg": "https://example.com/mountain_cabin.jpg",
+            "images": [
+                "https://example.com/mountain_cabin1.jpg",
+                "https://example.com/mountain_cabin2.jpg",
+                "https://example.com/mountain_cabin3.jpg"
+            ],
+            "longitude": -85.123456,
+            "latitude": 39.123456,
+            "description": "Escape to this rustic mountain cabin with beautiful views.",
+            "createdAt": "2023-10-16",
+            "owner": {
+                "ownerName": "Emily Turner",
+                "ownerImg": "https://example.com/emilyturner.jpg"
+            },
+            "rentalFeatures": null
+        },
+        {
+            "id": 3,
+            "price": 1800,
+            "title": "Downtown Loft with a View",
+            "location": "456 City Ave, Downtown, USA",
+            "bedroom": 1,
+            "bathroom": 1,
+            "area": "900 sqft",
+            "type": "rent",
+            "isPopular": true,
+            "baseImg": "https://example.com/downtown_loft.jpg",
+            "images": [
+                "https://example.com/downtown_loft1.jpg",
+                "https://example.com/downtown_loft2.jpg"
+            ],
+            "longitude": -98.765432,
+            "latitude": 35.678901,
+            "description": "Live in the heart of the city in this stylish downtown loft.",
+            "createdAt": "2023-10-17",
+            "owner": {
+                "ownerName": "Michael Johnson",
+                "ownerImg": "https://example.com/michaeljohnson.jpg"
+            },
+            "rentalFeatures": {
+                "dateAvailable": "2023-11-01",
+                "laundry": true,
+                "parking": true,
+                "estateType": "loft",
+                "deposit": 1500,
+                "heating": true,
+                "cooling": true,
+                "yearBuilt": 2010,
+                "size": 900,
+                "lotSize": null,
+                "city": "Downtown"
+            }
+        },
+        {
+            "id": 4,
+            "price": 320000,
+            "title": "Luxury Beachfront Villa",
+            "location": "123 Shore Rd, Beachfront, USA",
+            "bedroom": 5,
+            "bathroom": 4,
+            "area": "3500 sqft",
+            "type": "buy",
+            "isPopular": true,
+            "baseImg": "https://example.com/beachfront_villa.jpg",
+            "images": [
+                "https://example.com/beachfront_villa1.jpg",
+                "https://example.com/beachfront_villa2.jpg",
+                "https://example.com/beachfront_villa3.jpg"
+            ],
+            "longitude": -80.123456,
+            "latitude": 25.123456,
+            "description": "Experience luxury living with this beachfront villa.",
+            "createdAt": "2023-10-18",
+            "owner": {
+                "ownerName": "Olivia Davis",
+                "ownerImg": "https://example.com/oliviadavis.jpg"
+            },
+            "rentalFeatures": null
+        },
+        {
+            "id": 5,
+            "price": 1500,
+            "title": "Cozy Studio Apartment",
+            "location": "789 Elm St, City Central, USA",
+            "bedroom": 0,
+            "bathroom": 1,
+            "area": "500 sqft",
+            "type": "rent",
+            "isPopular": false,
+            "baseImg": "https://example.com/studio_apartment.jpg",
+            "images": [
+                "https://example.com/studio_apartment1.jpg",
+                "https://example.com/studio_apartment2.jpg"
+            ],
+            "longitude": -96.789012,
+            "latitude": 36.789012,
+            "description": "A comfortable studio apartment in the heart of the city.",
+            "createdAt": "2023-10-19",
+            "owner": {
+                "ownerName": "Sophia Martinez",
+                "ownerImg": "https://example.com/sophiamartinez.jpg"
+            },
+            "rentalFeatures": {
+                "dateAvailable": "2023-11-01",
+                "laundry": true,
+                "parking": true,
+                "estateType": "apartment",
+                "deposit": 1000,
+                "heating": true,
+                "cooling": true,
+                "yearBuilt": 2015,
+                "size": 500,
+                "lotSize": null,
+                "city": "City Central"
+            }
+        }
+    ]
+}
