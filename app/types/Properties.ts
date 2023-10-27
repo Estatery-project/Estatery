@@ -1,4 +1,4 @@
-import Estate from './Estates'
+import Estate from './Estate'
 
 declare interface Properties {
     properties: Estate[]

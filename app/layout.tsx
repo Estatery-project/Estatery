@@ -4,9 +4,7 @@ import { Inter } from 'next/font/google'
 import { Open_Sans } from 'next/font/google'
 import Footer from './components/layout/Footer'
 import './public/assets/fonts/stylesheet.css'
-//theme
 import 'primereact/resources/themes/lara-light-indigo/theme.css'
-
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api'
 
 const inter = Inter({ subsets: ['latin'] })
