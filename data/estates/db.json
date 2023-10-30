@@ -10,7 +10,7 @@
             "area": "1800 sqft",
             "type": "buy",
             "isPopular": false,
-            "baseImg": "https://s3-alpha-sig.figma.com/img/3bc5/d3d4/eb73e01c9a4d802c2fefb8da4485a85d?Expires=1699228800&Signature=LtlYrMovH7ox6XKxBcVyHUQ-1xX9b2SO07SILKrqbBrSdTKA6UYFbMVdDw~H9Yr8VoYpNef4G8wWgHy63BFpKrvsTGes12A5mlQBGuRCUyP6QYs4tbzLqmcKWi4NoXooaaxwrJtLaoBrAeTfoRyBk8Xe5jkhPPOID9HTqjgWv8lV3Q17IJ3Iq0O9NPoDONTVBJcm5UeZRb25myGbwJXI9Fri9J4fLzb5mC7SwRCvtlaZWs3L9NZAP~ZPov0fu~kw01mVHc9F1ajUU~fHYuTn--RbmE7CIcoMZIYnLpz6AxmJmGL46ENypHNnkp5JgR2PiO3jX6wCQERMpQfjtQkW~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+            "baseImg": "https://ik.imagekit.io/wnivejxts/default-image.jpg?updatedAt=1698665956184",
             "images": [
                 "https://example.com/mountain_cabin1.jpg",
                 "https://example.com/mountain_cabin2.jpg",
@@ -36,7 +36,7 @@
             "area": "900 sqft",
             "type": "rent",
             "isPopular": true,
-            "baseImg": "https://example.com/downtown_loft.jpg",
+            "baseImg": "https://ik.imagekit.io/wnivejxts/blogheroimg.png?updatedAt=1698673715532",
             "images": [
                 "https://example.com/downtown_loft1.jpg",
                 "https://example.com/downtown_loft2.jpg"

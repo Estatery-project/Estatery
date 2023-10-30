@@ -14,14 +14,17 @@ type EstateCardProps = {
 }
 
 const EstateCard = ({ estateData }: EstateCardProps) => {
+    console.log(estateData,'estateData');
+    
     return (
         <div className="text-[#000929]">
             <Link href={'#'}>
                 <div className="relative">
-                    <img
+                    {/* <img
                         className="w-[352px] rounded-t-xl"
-                        src="https://s3-alpha-sig.figma.com/img/e241/f7e9/15b9d6b174b856e0c2a88b8d48db6d25?Expires=1698624000&Signature=pKmDU4XMgGCgJaXxv7ItBh7-us0gJi-FBN8bYx63pTxl2g0-6rcUl49wnvadvAxjJH85KGgT2WNZq1nLR6UxZBMNuvNROox6PWNLzjp57Kvwi~dOegmOt2WTNyvLwzwLS60q3Px4jB5xh9-Tc5i0fh5OSKSyGdYTN9fnciOhgwUe1wNYiZjzpLOpHTFYYA-6tTOW8~RfZP3Yb-tq2-5Ejw4sKRzD~swj2g0Gtd0A-zhm8ut3hEcB1xUcOQKU2fHF~kJNxXWY87taptazPtHAXZO6I1sPRDeoS66KaKxPpW3jhkgvfc8wAqFIFyKvihlZT3dQhELAbYhcwp3-cR1Vxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                    />
+                        src={estateData?.baseImg}
+                    /> */}
+                    <img className='w-[352px] h-[200px]' src={estateData?.baseImg} alt="" />
                     <EstatePopularity className="absolute bottom-[-20px] left-[-15px]" />
                 </div>
             </Link>
