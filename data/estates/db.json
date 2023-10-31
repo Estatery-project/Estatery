@@ -1,6 +1,33 @@
 {
     "estates": [
         {
+            "id": 1,
+            "price": 30000,
+            "title": "Scenic Mountain Cabin",
+            "location": "789 Pine Rd, Mountainside, USA",
+            "bedroom": 1,
+            "bathroom": 2,
+            "area": "1800 sqft",
+            "type": "buy",
+            "propertyType": "house", 
+            "isPopular": false,
+            "baseImg": "https://ik.imagekit.io/wnivejxts/homeImg.png?updatedAt=1698677468092",
+            "images": [
+                "https://example.com/mountain_cabin1.jpg",
+                "https://example.com/mountain_cabin2.jpg",
+                "https://example.com/mountain_cabin3.jpg"
+            ],
+            "longitude": -45.123456,
+            "latitude": 39.123456,
+            "description": "Escape to this rustic mountain cabin with beautiful views.",
+            "createdAt": "2022-10-16",
+            "owner": {
+                "ownerName": "Emily Turner",
+                "ownerImg": "https://example.com/emilyturner.jpg"
+            },
+            "rentalFeatures": null
+        },
+        {
             "id": 2,
             "price": 280000,
             "title": "Scenic Mountain Cabin",
@@ -9,8 +36,9 @@
             "bathroom": 2,
             "area": "1800 sqft",
             "type": "buy",
+            "propertyType": "house", 
             "isPopular": false,
-            "baseImg": "https://ik.imagekit.io/wnivejxts/default-image.jpg?updatedAt=1698665956184",
+            "baseImg": "https://ik.imagekit.io/wnivejxts/homeImg.png?updatedAt=1698677468092",
             "images": [
                 "https://example.com/mountain_cabin1.jpg",
                 "https://example.com/mountain_cabin2.jpg",
@@ -35,8 +63,9 @@
             "bathroom": 1,
             "area": "900 sqft",
             "type": "rent",
+            "propertyType": "apartment",
             "isPopular": true,
-            "baseImg": "https://ik.imagekit.io/wnivejxts/blogheroimg.png?updatedAt=1698673715532",
+            "baseImg": "https://ik.imagekit.io/wnivejxts/homImg1.png?updatedAt=1698677467901",
             "images": [
                 "https://example.com/downtown_loft1.jpg",
                 "https://example.com/downtown_loft2.jpg"
@@ -72,8 +101,9 @@
             "bathroom": 4,
             "area": "3500 sqft",
             "type": "buy",
+            "propertyType": "loft",
             "isPopular": true,
-            "baseImg": "https://example.com/beachfront_villa.jpg",
+            "baseImg": "https://ik.imagekit.io/wnivejxts/homeImg9.png?updatedAt=1698677467994",
             "images": [
                 "https://example.com/beachfront_villa1.jpg",
                 "https://example.com/beachfront_villa2.jpg",
@@ -98,8 +128,9 @@
             "bathroom": 1,
             "area": "500 sqft",
             "type": "rent",
+            "propertyType": "villa",
             "isPopular": false,
-            "baseImg": "https://example.com/studio_apartment.jpg",
+            "baseImg": "https://ik.imagekit.io/wnivejxts/homeImg6.png?updatedAt=1698677468005",
             "images": [
                 "https://example.com/studio_apartment1.jpg",
                 "https://example.com/studio_apartment2.jpg"

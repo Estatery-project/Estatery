@@ -7,6 +7,7 @@ declare interface Estate {
     bathroom: number
     area: string
     type: string //rent or buy
+    propertyType: string //apartment, house, condo, townhouse, co-op, loft, multi-family
     isPopular: boolean
     baseImg: string
     images: string[]

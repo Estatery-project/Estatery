@@ -1,0 +1,90 @@
+{
+    "locations": [
+        {
+            "id": 1,
+            "location": "Alabama, America",
+            "createdAt": "2019-12-12T12:12:12.000Z"
+        },
+        {
+            "id": 2,
+            "location": "Alaska, America",
+            "createdAt": "2020-01-15T14:30:45.000Z"
+        },
+
+        {
+            "id": 3,
+            "location": "Arizona, America",
+            "createdAt": "2018-08-25T09:45:00.000Z"
+        },
+        {
+            "id": 4,
+            "location": "Arkansas, America",
+            "createdAt": "2022-05-10T18:20:30.000Z"
+        },
+        {
+            "id": 5,
+            "location": "California, America",
+            "createdAt": "2021-03-05T16:55:22.000Z"
+        },
+        {
+            "id": 6,
+            "location": "Colorado, America",
+            "createdAt": "2020-11-20T21:10:15.000Z"
+        },
+        {
+            "id": 7,
+            "location": "Connecticut, America",
+            "createdAt": "2019-07-17T08:40:05.000Z"
+        },
+        {
+            "id": 8,
+            "location": "Delaware, America",
+            "createdAt": "2022-02-28T10:15:18.000Z"
+        },
+        {
+            "id": 9,
+            "location": "Florida, America",
+            "createdAt": "2021-10-14T17:12:33.000Z"
+        },
+        {
+            "id": 10,
+            "location": "Georgia, America",
+            "createdAt": "2022-07-09T19:25:50.000Z"
+        },
+        {
+            "id": 11,
+            "location": "Kansas, America",
+            "createdAt": "2020-12-01T13:18:27.000Z"
+        },
+        {
+            "id": 12,
+            "location": "Massachusetts, America",
+            "createdAt": "2019-05-30T11:05:40.000Z"
+        },
+        {
+            "id": 13,
+            "location": "Mississippi, America",
+            "createdAt": "2021-09-19T15:42:55.000Z"
+        },
+        {
+            "id": 14,
+            "location": "New Jersey, America",
+            "createdAt": "2020-06-14T22:08:10.000Z"
+        },
+        {
+            "id": 15,
+            "location": "Texas, America",
+            "createdAt": "2022-03-03T20:35:28.000Z"
+        },
+        {
+            "id": 16,
+            "location": "Vermont, America",
+            "createdAt": "2018-10-12T07:30:15.000Z"
+        },
+        {
+            "id": 17,
+            "location": "Wisconsin, America",
+            "createdAt": "2021-04-28T09:55:37.000Z"
+        }
+    ]
+}

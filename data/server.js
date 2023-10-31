@@ -1,6 +1,6 @@
 const jsonServer = require('json-server')
 const server = jsonServer.create()
-const router = jsonServer.router('estates/db.json')
+var router  = jsonServer.router(require('./db.js')())
 const middlewares = jsonServer.defaults()
 
 // Set default middlewares (logger, static, cors and no-cache)

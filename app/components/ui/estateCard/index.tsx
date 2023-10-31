@@ -24,7 +24,7 @@ const EstateCard = ({ estateData }: EstateCardProps) => {
                         className="w-[352px] rounded-t-xl"
                         src={estateData?.baseImg}
                     /> */}
-                    <img className='w-[352px] h-[200px]' src={estateData?.baseImg} alt="" />
+                    <img className='w-[352px] h-[235px] object-cover rounded-t-lg' src={estateData?.baseImg} alt={estateData?.title} />
                     <EstatePopularity className="absolute bottom-[-20px] left-[-15px]" />
                 </div>
             </Link>

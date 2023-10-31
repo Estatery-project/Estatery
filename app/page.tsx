@@ -4,6 +4,7 @@ import Testimonials from './components/ui/home/testimonials'
 import HomeEstates from './components/ui/home/estates'
 import Benefit from './components/ui/home/benefit'
 import Tenants from './components/ui/home/tenants'
+import FilterBar from './components/ui/FilterBar'
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <HomeEstates />
             <Testimonials />
             <HomeContact />
+            <FilterBar/>
         </main>
     )
 }

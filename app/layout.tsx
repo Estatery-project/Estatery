@@ -6,7 +6,7 @@ import Footer from './components/layout/Footer'
 import './public/assets/fonts/stylesheet.css'
 import 'primereact/resources/themes/lara-light-indigo/theme.css'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api'
-
+import Providers from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
         <html lang="en">
             <PrimeReactProvider>
                 <body className={inter.className}>
-                    {children}
+                    <Providers>{children}</Providers>
                     <Footer />
                 </body>
             </PrimeReactProvider>
