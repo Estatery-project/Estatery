@@ -14,7 +14,6 @@ type EstateCardProps = {
 }
 
 const EstateCard = ({ estateData }: EstateCardProps) => {
-    console.log(estateData,'estateData');
     
     return (
         <div className="text-[#000929]">
@@ -45,7 +44,7 @@ const EstateCard = ({ estateData }: EstateCardProps) => {
                         {estateData?.title}
                     </span>
                     <p className="text-[16px] opacity-[0.5]">
-                        {estateData?.description}
+                        {estateData?.location}
                     </p>
                     <HeartLogo className="absolute right-0 top-4 cursor-pointer" />
                 </div>

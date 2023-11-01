@@ -10,15 +10,8 @@ import {
 } from '@/app/public/assets/icons/icons'
 import EstateCard from '../../estate-card'
 import Estate from '@/app/types/Estate'
+import getData from '@/services/estatesApi'
 
-async function getData() {
-    const res = await fetch('http://localhost:8000/estates')
-    if (!res.ok) {
-        throw new Error('Failed to fetch data')
-    }
-
-    return res.json()
-}
 const HomeEstates = async () => {
     const data = await getData()
 
@@ -45,7 +38,7 @@ const HomeEstates = async () => {
                 {/* ESTATES */}
                 <div className="grid grid-cols-3 gap-8 container mx-auto">
                     {data &&
-                        data.map((estate: Estate) => {
+                        data?.estates?.map((estate: Estate) => {
                             return (
                                 <EstateCard
                                     key={estate.id}
