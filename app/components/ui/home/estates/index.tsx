@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../Button'
+import Button from '../../button'
 import Link from 'next/link'
 import {
     AreaIcon,
@@ -8,7 +8,7 @@ import {
     EstatePopularity,
     HeartLogo,
 } from '@/app/public/assets/icons/icons'
-import EstateCard from '../../estateCard'
+import EstateCard from '../../estate-card'
 import Estate from '@/app/types/Estate'
 
 async function getData() {

@@ -39,6 +39,7 @@ const config: Config = {
             '2xl': ['24px', { fontWeight: 700 }],
             xl: ['20px', '32px'],
             lg: '18px',
+            xs: '12px',
         },
 
         letterSpacing: {

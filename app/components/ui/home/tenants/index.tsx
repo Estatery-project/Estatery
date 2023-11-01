@@ -6,7 +6,7 @@ import Tab from '@mui/material/Tab'
 
 import Image from 'next/image'
 import HomeImage from '../../../../public/assets/images/Home-1.png'
-import Button from '../../Button'
+import Button from '../../button'
 
 import {
     ArrowRigtIcon,
@@ -42,7 +42,7 @@ const Tenants = () => {
                     <h2 className="text-blue-black text-[40px] font-bold">
                         We make it easy for tenants and landlords.
                     </h2>
-                    <p className="text-midnight text-base font-medium leading-6 w-[80%]">
+                    <p className="text-blue-gray-500 text-base font-medium leading-6 w-[80%]">
                         Whether it’s selling your current home, getting
                         financing, or buying a new home, we make it easy and
                         efficient. The best part? you’ll save a bunch of money
