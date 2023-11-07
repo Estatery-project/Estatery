@@ -16,7 +16,7 @@ export default function Home() {
             <HomeEstates />
             <Testimonials />
             <HomeContact />
-            <FilterBar />
+            {/* <FilterBar /> */}
         </main>
     )
 }

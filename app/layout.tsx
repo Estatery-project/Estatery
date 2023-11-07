@@ -7,6 +7,7 @@ import './public/assets/fonts/stylesheet.css'
 import 'primereact/resources/themes/lara-light-indigo/theme.css'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api'
 import Providers from './providers'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {

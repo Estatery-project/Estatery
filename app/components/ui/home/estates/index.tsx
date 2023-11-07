@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../button'
+import Button from '../../Button'
 import Link from 'next/link'
 import {
     AreaIcon,
@@ -14,6 +14,8 @@ import getData from '@/services/estatesApi'
 
 const HomeEstates = async () => {
     const data = await getData()
+    console.log(data, 'data');
+    
 
     return (
         <section className="bg-custom-gradient-estates ">
@@ -38,7 +40,7 @@ const HomeEstates = async () => {
                 {/* ESTATES */}
                 <div className="grid grid-cols-3 gap-8 container mx-auto">
                     {data &&
-                        data?.estates?.map((estate: Estate) => {
+                        data?.map((estate: Estate) => {
                             return (
                                 <EstateCard
                                     key={estate.id}
