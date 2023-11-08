@@ -1,13 +1,14 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Open_Sans } from 'next/font/google'
-import Footer from './components/layout/Footer'
-import './public/assets/fonts/stylesheet.css'
-import 'primereact/resources/themes/lara-light-indigo/theme.css'
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api'
-import Providers from './providers'
 
+import { PrimeReactProvider } from 'primereact/api'
+import Providers from './providers'
+import 'primereact/resources/themes/lara-light-indigo/theme.css'
+
+import Footer from './components/layout/Footer'
+
+import './globals.css'
+import '/public/assets/fonts/stylesheet.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {

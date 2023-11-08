@@ -1,14 +1,9 @@
-import React from 'react'
-import getData from '@/services/estatesApi'
 import { useQuery } from '@tanstack/react-query'
 
-export interface FilterState {
-    location: string
-    calendar: any | null
-    minPrice: string
-    maxPrice: string
-    propertyType: string
-}
+import getData from '@/app/services/estatesApi'
+
+import FilterState from '@/app/types/FilterEstate'
+
 export const useFilterEstates = (selectedFilter: FilterState, Enabled: any) => {
     const { data, isLoading, error, refetch } = useQuery({
         queryKey: [

@@ -1,10 +1,18 @@
 import React from 'react'
 
-const Button = ({ className, type, children }: any) => {
+interface IButton {
+    className: string | undefined
+    children: React.ReactNode
+    type: 'submit' | 'reset' | 'button' | undefined
+    onClick: () => void | null
+}
+
+const Button = ({ type, className, children, onClick }: IButton) => {
     return (
         <button
             type={type}
-            className={`bg-[#7065F0] text-[#fff] rounded-[8px] text-4 font-[700] ${className}`}
+            onClick={onClick}
+            className={`bg-indigo text-white rounded-[8px] text-4 font-[700] ${className}`}
         >
             {children}
         </button>

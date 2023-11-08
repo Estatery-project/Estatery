@@ -1,13 +1,12 @@
 'use client'
 
-import React from 'react'
-import { MainLogo } from '@/app/public/assets/icons/icons'
 import {
     TwitterIcon,
     FacebookIcon,
     LinkedinIcon,
     InstagramIcon,
-} from '@/app/public/assets/icons/icons'
+    MainLogo,
+} from '@/public/assets/icons/icons'
 
 const Footer = () => {
     return (

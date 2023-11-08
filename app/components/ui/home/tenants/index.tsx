@@ -1,18 +1,19 @@
 'use client'
+
 import { useState } from 'react'
 
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 
-import Image from 'next/image'
-import HomeImage from '../../../../public/assets/images/Home-1.png'
-import Button from '../../button'
-
 import {
     ArrowRigtIcon,
     FindTheBestDealIcon,
     VirtualHomeTourIcon,
-} from '@/app/public/assets/icons/icons'
+} from '@/public/assets/icons/icons'
+
+import Image from 'next/image'
+import HomeImage from '@/public/assets/images/Home-1.png'
+import Button from '../../button'
 
 const Tenants = () => {
     const [tabIndex, setTabIndex] = useState(0)
@@ -58,17 +59,3 @@ const Tenants = () => {
 }
 
 export default Tenants
-
-{
-    /* <div className="flex items-center gap-6 bg-[#fff] shadow-[rgba(112, 101, 240, 0.20)] z-10 rounded-lg py-6 ps-8 pr-14 absolute top-6 left-[-120px] ">
-                        <VideoVirtualIcon />
-                        <div className="">
-                            <h3 className="font-bold text-xl text-[#100A55] mb-[2px]">
-                                Virtual home tour
-                            </h3>
-                            <p className="text-base text-[#4D5461] font-normal">
-                                We provide you with virtual tour
-                            </p>
-                        </div>
-                    </div> */
-}

@@ -2,9 +2,9 @@ import { data } from '@/mocks/data'
 import React from 'react'
 import { cookies } from 'next/headers'
 import FilterBar from '@/app/components/ui/filter-bar'
-import EstateCard from '@/app/components/ui/estate-card'
+import EstateCard from '@/app/components/futures/estates/estate-card'
 import { useQueryClient } from '@tanstack/react-query'
-import ListEstates from '@/app/components/ui/ListEstates'
+import ListEstates from '@/app/components/futures/estates/estates-list'
 import { Suspense } from 'react'
 
 const page = async () => {

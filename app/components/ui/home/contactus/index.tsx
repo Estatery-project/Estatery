@@ -1,17 +1,16 @@
-import React from 'react'
 import Button from '../../Button'
 
 const HomeContact = () => {
     return (
-        <section className="bg-[#100A55] flex items-center justify-center pt-[64px] pb-[80px]  ">
+        <section className="bg-midnight flex items-center justify-center pt-[64px] pb-[80px]  ">
             <div className="flex flex-col justify-between h-[280px] items-center">
-                <h3 className="text-[24px] font-[700] text-[#7065F0]">
+                <h3 className="text-[24px] font-[700] text-indigo">
                     No Spam Promise
                 </h3>
-                <h1 className="font-[700] text-[#fff] text-[40px]">
+                <h1 className="font-[700] text-white text-[40px]">
                     Are you a landlord?
                 </h1>
-                <p className=" text-[#D3D5DA]">
+                <p className=" text-blue-gray-300">
                     Discover ways to increase your home's value and get listed.
                     No Spam.
                 </p>
@@ -24,14 +23,14 @@ const HomeContact = () => {
                         />
                         <Button
                             type="submit"
-                            className="bg-[#7065F0] text-[#fff]  right-3 top-[20%] px-[40px] py-[12px] rounded-[8px] absolute"
+                            className="bg-indigo text-white  right-3 top-[20%] px-[40px] py-[12px] rounded-[8px] absolute"
                         >
                             Submit
                         </Button>
                     </div>
                 </form>
-                <p className="text-[#D3D5DA] ">
-                    Join <span className="font-[600] text-[#fff]">10,000+</span>{' '}
+                <p className="text-blue-gray-300 ">
+                    Join <span className="font-[600] text-white">10,000+</span>{' '}
                     other landlords in our estatery community.
                 </p>
             </div>

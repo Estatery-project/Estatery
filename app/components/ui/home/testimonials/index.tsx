@@ -1,10 +1,9 @@
-import React from 'react'
 import { Avatar } from 'primereact/avatar'
 
 const Testimonials = () => {
     return (
         <section className="w-full bg-custom-gradient-index py-20">
-            <div className="text-[#000929] flex flex-col justify-between items-center max-w-[736px] mx-auto h-[380px] ">
+            <div className="text-blue-black flex flex-col justify-between items-center max-w-[736px] mx-auto h-[380px] ">
                 <h1 className="text-[40px] font-[700]">Testimonials</h1>
                 <p className="font-[16px] font-400 opacity-[0.7]">
                     See what our property managers, landlords, and tenants have

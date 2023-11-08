@@ -1,30 +1,19 @@
 'use client'
 import React, { useState } from 'react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-
+import { useRouter } from 'next/navigation'
 import { useQuery } from '@tanstack/react-query'
 
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
-import getTodos from '@/services/locationsApi'
-import getData from '@/services/estatesApi'
-
 import { useFilter } from './useFilter'
 import { useFilterEstates } from './useFilterEstates'
-import { useQueryString } from '@/app/hooks/useQueryString'
 
+import FilterState from '@/app/types/FilterEstate'
 import Estate from '@/app/types/Estate'
-import Button from '../Button'
 
-interface FilterState {
-    location: string
-    calendar: any | null
-    minPrice: string
-    maxPrice: string
-    propertyType: string
-}
+import Button from '../Button'
 
 const FilterBar = () => {
     const [selectedFilter, setSelectedFilter] = useState<FilterState>({
@@ -71,22 +60,12 @@ const FilterBar = () => {
     ]
 
     const router = useRouter()
-    const pathname = usePathname()
-    const { createQueryString } = useQueryString()
 
     const { data, isLoading, error, refetch } = useFilter()
-
-    const {
-        data: estateData,
-        isLoading: estateLoad,
-        error: estateError,
-        refetch: estateRefetch,
-    } = useFilterEstates(selectedFilter, { enabled })
 
     const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         setEnabled(true)
-        console.log(estateData, 'estateData')
 
         router.push(
             `?location=${selectedFilter?.location}&calendar=${selectedFilter?.calendar}&minPrice=${selectedFilter.minPrice}&maxPrice=${selectedFilter.maxPrice}&propertyType=${selectedFilter?.propertyType}`
@@ -107,15 +86,8 @@ const FilterBar = () => {
         // )
     }
 
-    if (isLoading) {
-        return <div>Loading...</div>
-    }
-    if (error) {
-        return <div>Error</div>
-    }
-
     return (
-        <div className="bg-[#fff] rounded-[8px] p-5 mb-40 shadow-lg">
+        <div className="bg-white rounded-[8px] p-5 mb-40 shadow-lg">
             <div>
                 <form
                     onSubmit={handleSubmitForm}
@@ -125,7 +97,7 @@ const FilterBar = () => {
                     <div className="relative inline-block text-left max-w-[180px]  ">
                         <div className="w-[180px] ">
                             <div className="flex flex-col gap-y-2">
-                                <span className="rounded-md  cursor-pointer text-start text-[#000929]  font-[500] opacity-[0.5] px-4  py-2 text-gray-700 hover:bg-gray-100">
+                                <span className="rounded-md  cursor-pointer text-start text-blue-black  font-[500] opacity-[0.5] px-4  py-2 text-gray-700 hover:bg-gray-100">
                                     Location
                                 </span>
                                 <span
@@ -175,7 +147,7 @@ const FilterBar = () => {
                         <div className="flex flex-col items-start gap-y-2">
                             <div>
                                 {' '}
-                                <span className="rounded-md  cursor-pointer text-start text-[#000929]  font-[500] opacity-[0.5]  py-2 text-gray-700 hover:bg-gray-100">
+                                <span className="rounded-md  cursor-pointer text-start text-blue-black  font-[500] opacity-[0.5]  py-2 text-gray-700 hover:bg-gray-100">
                                     When
                                 </span>{' '}
                             </div>
@@ -196,7 +168,7 @@ const FilterBar = () => {
 
                     <div className="w-[180px]">
                         <div className="flex flex-col">
-                            <span className="rounded-md  cursor-pointer text-start text-[#000929]  font-[500] opacity-[0.5] px-4 py-2 text-gray-700 hover:bg-gray-100">
+                            <span className="rounded-md  cursor-pointer text-start text-blue-black  font-[500] opacity-[0.5] px-4 py-2 text-gray-700 hover:bg-gray-100">
                                 Price
                             </span>
                             <span
@@ -255,7 +227,7 @@ const FilterBar = () => {
                     <div className="relative inline-block text-left max-w-[180px]">
                         <div className="w-[180px] ">
                             <div className="flex flex-col">
-                                <span className="rounded-md  cursor-pointer text-start text-[#000929]  font-[500] opacity-[0.5] px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                <span className="rounded-md  cursor-pointer text-start text-blue-black  font-[500] opacity-[0.5] px-4 py-2 text-gray-700 hover:bg-gray-100">
                                     Property
                                 </span>
                                 <span
