@@ -10,9 +10,14 @@ export const useFilterEstates = (selectedFilter: FilterState, Enabled: any) => {
             'estates',
             selectedFilter.propertyType,
             selectedFilter.location,
+            selectedFilter.type,
         ],
         queryFn: () =>
-            getData(selectedFilter.propertyType, selectedFilter.location),
+            getData(
+                selectedFilter.propertyType,
+                selectedFilter.location,
+                selectedFilter.type
+            ),
     })
 
     return { data, isLoading, error, refetch }

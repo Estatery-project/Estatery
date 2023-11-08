@@ -9,7 +9,8 @@ import Button from '../../Button'
 const HomeEstates = async ({ searchParams }: { searchParams: FilterState }) => {
     const data = await getData(
         searchParams?.propertyType,
-        searchParams?.location
+        searchParams?.location,
+        searchParams?.type
     )
 
     return (
@@ -34,11 +35,11 @@ const HomeEstates = async ({ searchParams }: { searchParams: FilterState }) => {
 
                 {/* ESTATES */}
                 <div className="grid grid-cols-3 gap-8 container mx-auto">
-                    {data?.map((estate: Estate) => {
+                    {data.length>0 ? data?.map((estate: Estate) => {
                         return (
                             <EstateCard key={estate.id} estateData={estate} />
                         )
-                    })}
+                    }) : 'There is no estate for filtering states'}
                 </div>
             </div>
         </section>

@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <section className="bg-purple-50 bg-hero-pattern bg-right bg-no-repeat">
             <div className="my-10 container flex mx-auto">
-                <div className="flex flex-col gap-8 py-[72px] w-[45%]">
+                <div className="flex flex-col gap-8 py-[72px] w-[45%] relative">
                     <h1 className="text-5xl text-blue-black">
                         Buy, rent, or sell your property easily
                     </h1>
@@ -27,7 +27,14 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <FilterBar />
+                        <FilterBar
+                            type={true}
+                            propertyType={false}
+                            when={true}
+                            location={true}
+                            price={false}
+                            className="absolute xl:w-[600px]"
+                        />
                     </div>
                 </div>
 

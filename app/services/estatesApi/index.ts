@@ -1,9 +1,9 @@
 import FilterStates from '@/app/types/FilterEstate'
 
-async function getData(selectedFilter: string, location: string) {
+async function getData(selectedFilter: string, location: string, type: string) {
     try {
         const res = await fetch(
-            `http://localhost:8000/estates?${
+            `http://localhost:8000/estates?${type ? `type=${type}` : ''}${
                 selectedFilter ? `propertyType=${selectedFilter}` : ''
             }${location ? `&location_like=${location}` : ''}`,
             { cache: 'force-cache' }
