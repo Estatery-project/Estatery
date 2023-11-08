@@ -6,14 +6,22 @@ import Benefit from './components/ui/home/benefit'
 import Tenants from './components/ui/home/tenants'
 import FilterBar from './components/ui/filter-bar'
 
-export default function Home() {
+interface FilterState {
+    location: string
+    calendar: any | null
+    minPrice: string
+    maxPrice: string
+    propertyType: string
+}
+
+export default function Home({ searchParams }: { searchParams: FilterState }) {
     return (
         <main className="">
             {/* <h1 className="">Estatery App</h1> */}
             <Hero />
             <Tenants />
             <Benefit />
-            <HomeEstates />
+            <HomeEstates searchParams={searchParams} />
             <Testimonials />
             <HomeContact />
             {/* <FilterBar /> */}

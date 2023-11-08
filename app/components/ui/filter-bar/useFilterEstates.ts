@@ -2,7 +2,7 @@ import React from 'react'
 import getData from '@/services/estatesApi'
 import { useQuery } from '@tanstack/react-query'
 
-interface FilterState {
+export interface FilterState {
     location: string
     calendar: any | null
     minPrice: string
@@ -19,7 +19,6 @@ export const useFilterEstates = (selectedFilter: FilterState, Enabled: any) => {
         queryFn: () =>
             getData(selectedFilter.propertyType, selectedFilter.location),
     })
-    Enabled
 
     return { data, isLoading, error, refetch }
 }

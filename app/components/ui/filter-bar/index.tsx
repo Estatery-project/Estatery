@@ -1,17 +1,23 @@
 'use client'
 import React, { useState } from 'react'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+
 import { useQuery } from '@tanstack/react-query'
-import getTodos from '@/services/locationsApi'
-import Button from '../Button'
+
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
-import dayjs, { Dayjs } from 'dayjs'
+
+import getTodos from '@/services/locationsApi'
 import getData from '@/services/estatesApi'
-import Estate from '@/app/types/Estate'
+
 import { useFilter } from './useFilter'
 import { useFilterEstates } from './useFilterEstates'
-import { useRouter } from 'next/router'
+import { useQueryString } from '@/app/hooks/useQueryString'
+
+import Estate from '@/app/types/Estate'
+import Button from '../Button'
+
 interface FilterState {
     location: string
     calendar: any | null
@@ -64,11 +70,10 @@ const FilterBar = () => {
         'other',
     ]
 
-    const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
-        setEnabled(true)
-        console.log(estateData, 'estateData')
-    }
+    const router = useRouter()
+    const pathname = usePathname()
+    const { createQueryString } = useQueryString()
+
     const { data, isLoading, error, refetch } = useFilter()
 
     const {
@@ -77,6 +82,30 @@ const FilterBar = () => {
         error: estateError,
         refetch: estateRefetch,
     } = useFilterEstates(selectedFilter, { enabled })
+
+    const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+        setEnabled(true)
+        console.log(estateData, 'estateData')
+
+        router.push(
+            `?location=${selectedFilter?.location}&calendar=${selectedFilter?.calendar}&minPrice=${selectedFilter.minPrice}&maxPrice=${selectedFilter.maxPrice}&propertyType=${selectedFilter?.propertyType}`
+        )
+
+        // router.push(
+        //     pathname +
+        //         '?' +
+        //         createQueryString('location', selectedFilter?.location) +
+        //         '&' +
+        //         createQueryString('calendar', selectedFilter?.calendar) +
+        //         '&' +
+        //         createQueryString('minPrice', selectedFilter?.minPrice) +
+        //         '&' +
+        //         createQueryString('maxPrice', selectedFilter?.maxPrice) +
+        //         '&' +
+        //         createQueryString('propertyType', selectedFilter?.propertyType)
+        // )
+    }
 
     if (isLoading) {
         return <div>Loading...</div>

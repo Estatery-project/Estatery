@@ -1,5 +1,8 @@
 import React from 'react'
 import Button from '../../Button'
+
+import { FilterState } from '../../filter-bar/useFilterEstates'
+
 import Link from 'next/link'
 import {
     AreaIcon,
@@ -12,10 +15,19 @@ import EstateCard from '../../estate-card'
 import Estate from '@/app/types/Estate'
 import getData from '@/services/estatesApi'
 
-const HomeEstates = async () => {
-    const data = await getData()
-    console.log(data, 'data');
-    
+interface FilterState {
+    location: string
+    calendar: any | null
+    minPrice: string
+    maxPrice: string
+    propertyType: string
+}
+
+const HomeEstates = async ({ searchParams }: { searchParams: FilterState }) => {
+    const data = await getData(
+        searchParams?.propertyType,
+        searchParams?.location
+    )
 
     return (
         <section className="bg-custom-gradient-estates ">

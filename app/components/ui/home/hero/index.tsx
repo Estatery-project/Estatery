@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import FilterBar from '../../filter-bar'
 
 export default function Hero() {
     return (
@@ -25,6 +25,9 @@ export default function Hero() {
                                 properties
                             </span>
                         </div>
+                    </div>
+                    <div className="w-full">
+                        <FilterBar />
                     </div>
                 </div>
 

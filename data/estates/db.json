@@ -9,7 +9,7 @@
             "bathroom": 2,
             "area": "1800 sqft",
             "type": "buy",
-            "propertyType": "house", 
+            "propertyType": "house",
             "isPopular": false,
             "baseImg": "https://ik.imagekit.io/wnivejxts/homeImg.png?updatedAt=1698677468092",
             "images": [
@@ -36,7 +36,7 @@
             "bathroom": 2,
             "area": "1800 sqft",
             "type": "buy",
-            "propertyType": "house", 
+            "propertyType": "house",
             "isPopular": false,
             "baseImg": "https://ik.imagekit.io/wnivejxts/homeImg.png?updatedAt=1698677468092",
             "images": [
@@ -101,7 +101,7 @@
             "bathroom": 4,
             "area": "3500 sqft",
             "type": "buy",
-            "propertyType": "loft",
+            "propertyType": "villa",
             "isPopular": true,
             "baseImg": "https://ik.imagekit.io/wnivejxts/homeImg9.png?updatedAt=1698677467994",
             "images": [
