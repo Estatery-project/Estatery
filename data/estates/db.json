@@ -2,6 +2,7 @@
     "estates": [
         {
             "id": 1,
+            "slug": "scenic-mountain-cabin",
             "price": 30000,
             "title": "Scenic Mountain Cabin",
             "location": "Alabama, America",
@@ -29,8 +30,9 @@
         },
         {
             "id": 2,
+            "slug":"scenic-mountain",
             "price": 280000,
-            "title": "Scenic Mountain Cabin",
+            "title": "Scenic Mountain",
             "location": "Arkansas, America",
             "bedroom": 3,
             "bathroom": 2,
@@ -57,6 +59,7 @@
         {
             "id": 3,
             "price": 1800,
+            "slug": "downtown-loft-with-a-view",
             "title": "Downtown Loft with a View",
             "location": "456 City Ave, Downtown, USA",
             "bedroom": 1,
@@ -94,6 +97,7 @@
         },
         {
             "id": 4,
+            "slug": "luxury-beachfront-villa",
             "price": 320000,
             "title": "Luxury Beachfront Villa",
             "location": "California, America",
@@ -121,6 +125,7 @@
         },
         {
             "id": 5,
+            "slug": "cozy-studio-apartment",
             "price": 1500,
             "title": "Cozy Studio Apartment",
             "location": "Colorado, America",
