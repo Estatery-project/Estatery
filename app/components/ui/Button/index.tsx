@@ -12,7 +12,7 @@ const Button = ({ type, className, children, onClick }: IButton) => {
         <button
             type={type}
             onClick={onClick}
-            className={`bg-indigo text-white rounded-[8px] text-4 font-[700] ${className}`}
+            className={`text-white bg-indigo  rounded-[8px] text-4 font-[700] ${className}`}
         >
             {children}
         </button>

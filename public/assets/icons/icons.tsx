@@ -1522,6 +1522,142 @@ const FindTheBestDealIcon = ({ children }: any) => {
     )
 }
 
+const ShareIcon = ({ children }: any) => {
+    return (
+        <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g clip-path="url(#clip0_29669_1203)">
+                <path
+                    d="M4 10C5.10457 10 6 9.10457 6 8C6 6.89543 5.10457 6 4 6C2.89543 6 2 6.89543 2 8C2 9.10457 2.89543 10 4 10Z"
+                    stroke="#7065F0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M12 6C13.1046 6 14 5.10457 14 4C14 2.89543 13.1046 2 12 2C10.8954 2 10 2.89543 10 4C10 5.10457 10.8954 6 12 6Z"
+                    stroke="#7065F0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+                    stroke="#7065F0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M5.7998 7.13288L10.1998 4.86621"
+                    stroke="#7065F0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M5.7998 8.86621L10.1998 11.1329"
+                    stroke="#7065F0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </g>
+            <defs>
+                <clipPath id="clip0_29669_1203">
+                    <rect width="16" height="16" fill="white" />
+                </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
+const FavoriteIcon = ({ children }: any) => {
+    return (
+        <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M2.87869 3.54568C2.60011 3.82426 2.37913 4.15498 2.22836 4.51896C2.0776 4.88294 2 5.27305 2 5.66702C2 6.06099 2.0776 6.4511 2.22836 6.81508C2.37913 7.17906 2.60011 7.50978 2.87869 7.78835L8.00003 12.9097L13.1214 7.78835C13.684 7.22574 14 6.46267 14 5.66702C14 4.87136 13.684 4.1083 13.1214 3.54568C12.5587 2.98307 11.7957 2.667 11 2.667C10.2044 2.667 9.4413 2.98307 8.87869 3.54568L8.00003 4.42435L7.12136 3.54568C6.84278 3.26711 6.51206 3.04612 6.14808 2.89536C5.78411 2.74459 5.39399 2.66699 5.00003 2.66699C4.60606 2.66699 4.21595 2.74459 3.85197 2.89536C3.48799 3.04612 3.15727 3.26711 2.87869 3.54568V3.54568Z"
+                stroke="#7065F0"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    )
+}
+
+const GlassIcon = ({ children }: any) => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+        >
+            <path
+                d="M9.58366 17.5003C13.9559 17.5003 17.5003 13.9559 17.5003 9.58366C17.5003 5.2114 13.9559 1.66699 9.58366 1.66699C5.2114 1.66699 1.66699 5.2114 1.66699 9.58366C1.66699 13.9559 5.2114 17.5003 9.58366 17.5003Z"
+                stroke="#7065F0"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M18.3337 18.3337L16.667 16.667"
+                stroke="#7065F0"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    )
+}
+
+const GalerryIcon = ({ children }: any) => {
+    return (
+        <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M5.99967 14.6663H9.99967C13.333 14.6663 14.6663 13.333 14.6663 9.99967V5.99967C14.6663 2.66634 13.333 1.33301 9.99967 1.33301H5.99967C2.66634 1.33301 1.33301 2.66634 1.33301 5.99967V9.99967C1.33301 13.333 2.66634 14.6663 5.99967 14.6663Z"
+                stroke="#7065F0"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M6.00033 6.66667C6.73671 6.66667 7.33366 6.06971 7.33366 5.33333C7.33366 4.59695 6.73671 4 6.00033 4C5.26395 4 4.66699 4.59695 4.66699 5.33333C4.66699 6.06971 5.26395 6.66667 6.00033 6.66667Z"
+                stroke="#7065F0"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M1.78027 12.633L5.06694 10.4264C5.59361 10.073 6.35361 10.113 6.82694 10.5197L7.04694 10.713C7.56694 11.1597 8.40694 11.1597 8.92694 10.713L11.7003 8.33305C12.2203 7.88638 13.0603 7.88638 13.5803 8.33305L14.6669 9.26638"
+                stroke="#7065F0"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    )
+}
+
 export {
     MainLogo,
     FacebookIcon,
@@ -1545,4 +1681,8 @@ export {
     VideoVirtualIcon,
     VirtualHomeTourIcon,
     FindTheBestDealIcon,
+    ShareIcon,
+    FavoriteIcon,
+    GlassIcon,
+    GalerryIcon,
 }

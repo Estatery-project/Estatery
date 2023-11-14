@@ -6,7 +6,6 @@ async function getData(selectedFilter: string, location: string, type: string) {
             `http://localhost:8000/estates?${type ? `type=${type}` : ''}${
                 selectedFilter ? `propertyType=${selectedFilter}` : ''
             }${location ? `&location_like=${location}` : ''}`,
-            { cache: 'force-cache' }
         )
         if (!res.ok) {
             throw new Error('Failed to fetch data')

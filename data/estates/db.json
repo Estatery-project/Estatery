@@ -14,9 +14,9 @@
             "isPopular": false,
             "baseImg": "https://ik.imagekit.io/wnivejxts/homeImg.png?updatedAt=1698677468092",
             "images": [
-                "https://example.com/mountain_cabin1.jpg",
-                "https://example.com/mountain_cabin2.jpg",
-                "https://example.com/mountain_cabin3.jpg"
+                "https://ik.imagekit.io/wnivejxts/homeImg.png?updatedAt=1698677468092",
+                "https://ik.imagekit.io/wnivejxts/homImg1.png?updatedAt=1698677467901",
+                "https://ik.imagekit.io/wnivejxts/homeImg9.png?updatedAt=1698677467994"
             ],
             "longitude": -45.123456,
             "latitude": 39.123456,
