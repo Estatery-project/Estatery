@@ -13,7 +13,7 @@ import {
 
 import Image from 'next/image'
 import HomeImage from '@/public/assets/images/Home-1.png'
-import Button from '../../button'
+import Button from '../../Button'
 
 const Tenants = () => {
     const [tabIndex, setTabIndex] = useState(0)
@@ -49,7 +49,10 @@ const Tenants = () => {
                         efficient. The best part? you’ll save a bunch of money
                         and time with our services.
                     </p>
-                    <Button className="py-3 px-6 flex items-center self-start gap-2 ">
+                    <Button
+                        type="button"
+                        className="py-3 px-6 flex items-center self-start gap-2 "
+                    >
                         See more <ArrowRigtIcon />
                     </Button>
                 </div>

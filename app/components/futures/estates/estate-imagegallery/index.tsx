@@ -1,12 +1,12 @@
 'use client'
 import React from 'react'
-import lightGallery from 'lightgallery'
 import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-zoom.css'
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
 import lgZoom from 'lightgallery/plugins/zoom'
 import dynamic from 'next/dynamic'
 import { GalerryIcon } from '@/public/assets/icons/icons'
+import Image from 'next/image'
 
 const LightGallery = dynamic(() => import('lightgallery/react'), {
     ssr: false,
@@ -21,7 +21,6 @@ const ImageGalleryComponent = ({
     baseImg,
     images,
 }: ImageGalleryComponentProps) => {
-    console.log(baseImg, images)
 
     return (
         <LightGallery

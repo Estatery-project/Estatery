@@ -10,6 +10,7 @@ async function getDynamicData(id: any) {
         return data;
     } catch (error: any) {
         throw new Error(error.message);
+        
     }
 }
 

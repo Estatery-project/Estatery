@@ -85,8 +85,6 @@ const FilterBar = ({
         )
     }
 
-    console.log(selectedFilter)
-
     return (
         <div>
             {type && (
@@ -317,7 +315,10 @@ const FilterBar = ({
                     )}
 
                     <div>
-                        <Button type="submit" className="px-8 py-4">
+                        <Button
+                            type="submit"
+                            className="px-8 py-4"
+                        >
                             Search
                         </Button>
                     </div>

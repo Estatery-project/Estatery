@@ -27,19 +27,27 @@ const HomeEstates = async ({ searchParams }: { searchParams: FilterState }) => {
                         </p>
                     </div>
                     <div>
-                        <Button type="button" className="px-8 py-4">
-                            Browse more properties
+                        <Button
+                            type="button"
+                            className="px-8 py-4" //Properties params should be Link from this page 
+                        >
+                            Browse more properties 
                         </Button>
                     </div>
                 </div>
 
                 {/* ESTATES */}
                 <div className="grid grid-cols-3 gap-8 container mx-auto">
-                    {data.length>0 ? data?.map((estate: Estate) => {
-                        return (
-                            <EstateCard key={estate.id} estateData={estate} />
-                        )
-                    }) : 'There is no estate for filtering states'}
+                    {data.length > 0
+                        ? data?.map((estate: Estate) => {
+                              return (
+                                  <EstateCard
+                                      key={estate.id}
+                                      estateData={estate}
+                                  />
+                              )
+                          })
+                        : 'There is no estate for filtering states'}
                 </div>
             </div>
         </section>
