@@ -1,11 +1,12 @@
 import FilterBar from '../../filter-bar'
+import { HeroStartingMarkerIcon, MarkerIcon } from '@/public/assets/icons/icons'
 
 export default function Hero() {
     return (
-        <section className="bg-purple-50 bg-hero-pattern bg-right bg-no-repeat">
-            <div className="my-10 container flex mx-auto">
+        <section className="bg-purple-50 bg-hero-pattern bg-right bg-no-repeat pt-16">
+            <div className="mb-10 container flex mx-auto items-center space-x-20">
                 <div className="flex flex-col gap-8 py-[72px] w-[45%] relative">
-                    <h1 className="text-5xl text-blue-black">
+                    <h1 className="text-5xl text-blue-black min-w-[544px]">
                         Buy, rent, or sell your property easily
                     </h1>
                     <p className="text-xl  text-blue-black font-medium leading-8">
@@ -40,9 +41,28 @@ export default function Hero() {
 
                 <div>
                     <img
-                        src="https://fastly.picsum.photos/id/42/200/200.jpg?hmac=jc_eDuYgXmIOC_4gl2wEY0jgxC2rMPJbDF6QJdynR7Q"
+                        src="../../../../assets/images/home-cart.png"
                         alt=""
                         className=""
+                    />
+                </div>
+
+                <div className="flex flex-col space-y-12">
+                    <div className='relative mt-14'>
+                    <HeroStartingMarkerIcon className=" top-[-15px] left-[-22px] bottom-0  absolute "/>
+                        <img
+                            src="../../../../assets/images/Vector.png"
+                            alt=""
+                            className=""
+                        />
+                    <MarkerIcon className=" top-[-15px] left-[-22px] bottom-0  absolute "/>
+                        
+                    </div>
+
+                    <img
+                        src="../../../../assets/images/2.png"
+                        alt=""
+                        className="pb-4"
                     />
                 </div>
             </div>

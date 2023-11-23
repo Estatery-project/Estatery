@@ -10,8 +10,9 @@ import FilterState from '@/app/types/FilterEstate'
 import Link from 'next/link'
 
 const page = async ({ searchParams }: { searchParams: FilterState }) => {
+ const {type} = searchParams;
     return (
-        <section className="bg-[#F7F7FD]">
+        <section className="bg-[#F7F7FD] pt-16">
             <div className="mx-auto container flex flex-col pt-20">
                 <div className='flex items-center justify-between mb-10'>
                   
@@ -42,6 +43,7 @@ const page = async ({ searchParams }: { searchParams: FilterState }) => {
                 </div>
 
                 <FilterBar
+                    paramType = {type}
                     className="mb-20"
                     type={false}
                     location={true}

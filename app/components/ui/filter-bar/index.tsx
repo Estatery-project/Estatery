@@ -14,6 +14,7 @@ import Button from '../Button'
 
 export interface FilterBarProps {
     className?: string
+    paramType?: string
     location: boolean
     when: boolean
     price: boolean
@@ -22,6 +23,7 @@ export interface FilterBarProps {
 }
 
 const FilterBar = ({
+    paramType,
     className,
     location,
     price,
@@ -81,8 +83,23 @@ const FilterBar = ({
         setEnabled(true)
 
         router.push(
-            `?type=${selectedFilter.type}&location=${selectedFilter?.location}&calendar=${selectedFilter?.calendar}&minPrice=${selectedFilter.minPrice}&maxPrice=${selectedFilter.maxPrice}&propertyType=${selectedFilter?.propertyType}`
+            `?type=${
+                selectedFilter.type || paramType
+            }&location=${selectedFilter?.location}&calendar=${selectedFilter?.calendar}&minPrice=${
+                selectedFilter.minPrice
+            }&maxPrice=${
+                selectedFilter.maxPrice
+            }&propertyType=${selectedFilter?.propertyType}`
         )
+
+        setSelectedFilter({
+            type: '',
+            location: '',
+            calendar: '',
+            minPrice: '',
+            maxPrice: '',
+            propertyType: '',
+        })
     }
 
     return (
@@ -315,10 +332,7 @@ const FilterBar = ({
                     )}
 
                     <div>
-                        <Button
-                            type="submit"
-                            className="px-8 py-4"
-                        >
+                        <Button type="submit" className="px-8 py-4">
                             Search
                         </Button>
                     </div>

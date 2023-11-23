@@ -1,7 +1,7 @@
 import React from 'react'
 import getDyamicData from '@/app/services/estateDynamicApi'
 import Estate from '@/app/types/Estate'
-import ImageGalleryComponent from '@/app/components/futures/estates/estate-imagegallery'
+import ImageGalleryComponent from '@/app/components/futures/estates/estatecard-imagegallery'
 import { FavoriteIcon, GlassIcon, ShareIcon } from '@/public/assets/icons/icons'
 import Link from 'next/link'
 import Features from '@/app/components/ui/property/features'
@@ -35,7 +35,7 @@ const Property = async ({ params }: { params: any }) => {
 
     return (
         <section className="">
-            <div className="container mx-auto flex flex-col">
+            <div className="container mx-auto flex flex-col pt-16">
                 {/* Title Start  */}
                 <div className="flex justify-between items-center mb-10 pt-20">
                     <div className="flex flex-col justify-between items-start gap-y-3">

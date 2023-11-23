@@ -9,6 +9,7 @@ import Footer from './components/layout/Footer'
 
 import './globals.css'
 import '/public/assets/fonts/stylesheet.css'
+import Header from './components/layout/Header'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
         <html lang="en">
             <PrimeReactProvider>
                 <body className={inter.className}>
+                    <Header/>
                     <Providers>{children}</Providers>
                     <Footer />
                 </body>

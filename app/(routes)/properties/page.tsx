@@ -18,7 +18,7 @@ const Properties = async ({ searchParams }: { searchParams: FilterState }) => {
     )
     return (
         <section className="">
-            <div className="container mx-auto flex flex-col ">
+            <div className="container mx-auto flex flex-col pt-16">
                 <div className="flex items-center justify-between mb-10 mt-20">
                     <h2 className="text-[#000929] text-[40px] font-[700] ">
                         All Properties

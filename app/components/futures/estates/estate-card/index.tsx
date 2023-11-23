@@ -11,9 +11,11 @@ import {
 import Estate from '@/app/types/Estate'
 
 const EstateCard = ({ estateData }: { estateData: Estate }) => {
+    console.log(estateData,'estateData');
+    
     return (
         <div className="text-blue-black">
-            <Link href={'#'}>
+            <Link href={`/properties/${estateData.id}`}>
                 <div className="relative">
                     {/* <img
                         className="w-[352px] rounded-t-xl"
