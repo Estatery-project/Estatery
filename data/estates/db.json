@@ -8,6 +8,9 @@
             "location": "Alabama, America",
             "bedroom": 1,
             "bathroom": 2,
+            "isAvailable": true,
+            "iseRepaired": true,
+            "aboutProperty": "Check out that Custom Backyard Entertaining space! 3237sqft, 4 Bedrooms, 2 Bathrooms house on a Lake Villa  street in the Palm Harbor neighborhood of Texas. Well cared for with tons of upgrades! Newer stainless steel appliances will stay with the unit, including dishwasher, fridge, stove, microwave, and washer and dryer. Tenant pays electricity and gas bills. Water, Sewer, and Trash are covered by Landlord. Tenant is responsible for lawncare and snow removal. Landlord provides lawn mower. Minimum one year lease.",
             "area": "1800 sqft",
             "type": "buy",
             "propertyType": "house",
@@ -18,19 +21,31 @@
                 "https://ik.imagekit.io/wnivejxts/homImg1.png?updatedAt=1698677467901",
                 "https://ik.imagekit.io/wnivejxts/homeImg9.png?updatedAt=1698677467994"
             ],
-            "longitude": -45.123456,
-            "latitude": 39.123456,
+            "longitude": 49.736917,
+            "latitude": 40.454861,
             "description": "Escape to this rustic mountain cabin with beautiful views.",
             "createdAt": "2022-10-16",
             "owner": {
                 "ownerName": "Emily Turner",
                 "ownerImg": "https://example.com/emilyturner.jpg"
             },
-            "rentalFeatures": null
+            "rentalFeatures": {
+                "dateAvailable": "2023-11-01",
+                "laundry": true,
+                "parking": true,
+                "estateType": "loft",
+                "deposit": 1500,
+                "heating": true,
+                "cooling": true,
+                "yearBuilt": 2010,
+                "size": 900,
+                "lotSize": null,
+                "city": "Downtown"
+            }
         },
         {
             "id": 2,
-            "slug":"scenic-mountain",
+            "slug": "scenic-mountain",
             "price": 280000,
             "title": "Scenic Mountain",
             "location": "Arkansas, America",
