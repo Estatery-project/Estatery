@@ -17,7 +17,7 @@ const Header = () => {
 // console.log(type,location,minPrice,maxPrice,propertyType);
 
     return (
-        <header className="bg-white  border-b border-[#E0DEF7] py-4  border-opacity-[0.7] fixed w-full z-10">
+        <header className="bg-white  border-b border-[#E0DEF7] py-4  border-opacity-[0.7] fixed top-0 w-full z-10">
             <div className="xl:max-w-[1280px] md:container mx-auto flex justify-between items-center">
                 <div className="">
                     <Link href="/">
