@@ -62,6 +62,7 @@ const Properties = async ({ searchParams }: { searchParams: FilterState }) => {
                                   <EstateCard
                                       key={estate.id}
                                       estateData={estate}
+                                      infoText={true}
                                   />
                               )
                           }) //change null validation to data

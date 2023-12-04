@@ -1187,9 +1187,10 @@ const HomeHeroIcon = () => {
     )
 }
 
-const ArrowRigtIcon = () => {
+const ArrowRigtIcon = ({className, stroke}:any) => {
     return (
         <svg
+            className={className}
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -1199,7 +1200,7 @@ const ArrowRigtIcon = () => {
             <g clip-path="url(#clip0_338_12920)">
                 <path
                     d="M7.5 5L12.5 10L7.5 15"
-                    stroke="white"
+                    stroke={stroke || 'white'}
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1597,9 +1598,10 @@ const FavoriteIcon = ({ children }: any) => {
     )
 }
 
-const GlassIcon = ({ children }: any) => {
+const GlassIcon = ({ className }: any) => {
     return (
         <svg
+            className={className}
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -1750,13 +1752,13 @@ const HeaderLogoIcon = ({ children }: any) => {
 const HeroStartingMarkerIcon = ({ className }: any) => {
     return (
         <svg
-        className={className}
+            className={className}
             width="56"
             height="56"
             viewBox="0 0 56 56"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-        > 
+        >
             <circle
                 cx="28"
                 cy="28"
@@ -1833,5 +1835,5 @@ export {
     MarkerIcon,
     HeaderLogoIcon,
     DropDownIcon,
-    HeroStartingMarkerIcon
+    HeroStartingMarkerIcon,
 }

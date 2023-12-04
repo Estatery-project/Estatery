@@ -6,6 +6,7 @@ declare interface FilterState {
     maxPrice: string
     propertyType: string
     type: string
+    bedroom: string | null
 }
 
 export default FilterState

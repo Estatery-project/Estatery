@@ -128,8 +128,8 @@
                 "https://example.com/beachfront_villa2.jpg",
                 "https://example.com/beachfront_villa3.jpg"
             ],
-            "longitude": -80.123456,
-            "latitude": 25.123456,
+            "longitude": 41.01384,
+            "latitude": 28.94966,
             "description": "Experience luxury living with this beachfront villa.",
             "createdAt": "2023-10-18",
             "owner": {

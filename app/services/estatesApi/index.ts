@@ -1,11 +1,11 @@
 import FilterStates from '@/app/types/FilterEstate'
 
-async function getData(selectedFilter: string, location: string, type: string) {
+async function getData(selectedFilter: string, location: string, type: string, bedroom:string) {
     try {
         const res = await fetch(
             `http://localhost:8000/estates?${type ? `type=${type}` : ''}${
                 selectedFilter ? `propertyType=${selectedFilter}` : ''
-            }${location ? `&location_like=${location}` : ''}`,
+            }${bedroom? `&bedroom=${bedroom}`:''}${location ? `&location_like=${location}` : ''}`
         )
         if (!res.ok) {
             throw new Error('Failed to fetch data')

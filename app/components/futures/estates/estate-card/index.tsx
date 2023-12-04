@@ -10,11 +10,17 @@ import {
 
 import Estate from '@/app/types/Estate'
 
-const EstateCard = ({ estateData }: { estateData: Estate }) => {
-    console.log(estateData,'estateData');
-    
+type EstateCardProps = {
+    estateData: Estate
+    className?: string | undefined
+    infoText?: boolean
+}
+
+const EstateCard = ({ estateData, className, infoText }: EstateCardProps) => {
+    console.log(estateData, 'estateData')
+
     return (
-        <div className="text-blue-black">
+        <div className={`text-blue-black  ${className}`}>
             <Link href={`/properties/${estateData.id}`}>
                 <div className="relative">
                     {/* <img
@@ -30,7 +36,7 @@ const EstateCard = ({ estateData }: { estateData: Estate }) => {
                 </div>
             </Link>
 
-            <div className="bg-white px-4 rounded-b-xl">
+            <div className="bg-white px-4 rounded-b-xl ">
                 <div className="relative flex flex-col justify-between pt-8 space-y-2 py-1">
                     <p className="text-indigo text-[24px] font-[800] ">
                         {estateData?.price}$
@@ -57,13 +63,14 @@ const EstateCard = ({ estateData }: { estateData: Estate }) => {
                         <div className="flex items-center space-x-2">
                             <BedIcon />
                             <span className="opacity-[0.7] text-[14px]">
-                                {estateData?.bedroom} Beds
+                                {estateData?.bedroom} {infoText ? 'Beds' : ''}
                             </span>
                         </div>
                         <div className="flex items-center space-x-2">
                             <BathIcon />
                             <span className="opacity-[0.7] text-[14px]">
-                                {estateData?.bathroom} Bathrooms
+                                {estateData?.bathroom}{' '}
+                                {infoText ? 'Bathrooms' : ''}
                             </span>
                         </div>
                         <div className="flex items-center space-x-2">

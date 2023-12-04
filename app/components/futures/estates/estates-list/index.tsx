@@ -15,7 +15,8 @@ const EstatesList = async ({searchParams, className}: EstateListProps) => {
     const data = await getData(
         searchParams?.propertyType,
         searchParams?.location,
-        searchParams?.type
+        searchParams?.type,
+        searchParams?.bedroom || '',
     )
 
     return (
@@ -24,7 +25,7 @@ const EstatesList = async ({searchParams, className}: EstateListProps) => {
                 {data.length > 0
                     ? data?.map((estate: Estate) => {
                           return (
-                              <EstateCard key={estate.id} estateData={estate} />
+                              <EstateCard key={estate.id} estateData={estate}  infoText={true}/>
                           )
                       })
                     : 'There is no estate for filtering states'}
