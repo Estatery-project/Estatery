@@ -27,7 +27,6 @@ const Property = async ({ params }: { params: any }) => {
         return <div>Not Found</div>
     }
 
-
     const center = {
         lat: Number(40.409264),
         lng: Number(49.867092),
@@ -161,7 +160,6 @@ const Property = async ({ params }: { params: any }) => {
                                 </div>
                             </div>
                         </section>
-
                     </div>
 
                     {/* Calculator  */}
@@ -170,16 +168,14 @@ const Property = async ({ params }: { params: any }) => {
                 </div>
 
                 {/* Similar Properties start */}
-
             </div>
             <SimilarEstates
-                            propertyType={data.propertyType}
-                            propertyId={data.id}
-                            // type={data.type}
-                            // location={data.location} 
-                            // numb={2}
-                            
-                        />
+                propertyType={data.propertyType}
+                propertyId={data.id}
+                // type={data.type}
+                // location={data.location}
+                // numb={2}
+            />
         </section>
     )
 }

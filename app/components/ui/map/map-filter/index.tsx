@@ -3,9 +3,12 @@
 import React, { useState } from 'react'
 import Button from '../../Button'
 import { MapFilterState } from '@/app/types/MapFilter'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 const MapFilter = () => {
+    const searchParams = useSearchParams();
+    const location = searchParams.get('location');
+
     const [isOpen, setIsOpen] = useState({
         openEstateType: false,
         openPriceDegree: false,
@@ -59,9 +62,17 @@ const MapFilter = () => {
         e.preventDefault()
 
         router.push(
-            `?${selectedFilter.estateType? 'propertyType='+selectedFilter.estateType :''}${selectedFilter.bedrooms!=null? '&bedroom='+selectedFilter.bedrooms:''}`
+            `?${
+                selectedFilter.estateType
+                    ? 'propertyType=' + selectedFilter.estateType
+                    : ''
+            }${
+                selectedFilter.bedrooms != null
+                    ? '&bedroom=' + selectedFilter.bedrooms
+                    : ''
+            }${location ? '&location=' + location : ''}`
         )
-  
+
         // setSelectedFilter({
         //     estateType: null,
         //     bedrooms: null,

@@ -15,8 +15,9 @@ export const useFilterEstates = (selectedFilter: any, Enabled: any) => {
             getData(
                 selectedFilter.propertyType,
                 selectedFilter.location,
-                selectedFilter.type
+                selectedFilter.type,
             ),
+            
     })
 
     return { data, isLoading, error, refetch }

@@ -101,7 +101,7 @@ const Map = async ({ searchParams }: { searchParams: FilterState }) => {
                     </div>
 
                     <div>
-                        <MapSearch/>
+                        <MapSearch Data={data} />
                     </div>
 
                     <div>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useQuery } from '@tanstack/react-query'
-
+import Link from 'next/link'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
@@ -38,6 +38,7 @@ const FilterBar = ({
         minPrice: '',
         maxPrice: '',
         propertyType: '',
+        bedroom: '' || null,
     })
     const [isOpen, setIsOpen] = useState({
         openLocation: false,
@@ -99,6 +100,7 @@ const FilterBar = ({
             minPrice: '',
             maxPrice: '',
             propertyType: '',
+            bedroom: '' || null,
         })
     }
 
@@ -331,7 +333,14 @@ const FilterBar = ({
                         </div>
                     )}
 
-                    <div>
+                    <div className="flex space-x-3 items-center">
+                        <Link
+                            href="/map"
+                            className="px-8 py-4 text-[#7065F0] bg-[#E8E6F9]  rounded-[8px] font-[700]"
+                        >
+                            Map
+                        </Link>
+
                         <Button type="submit" className="px-8 py-4">
                             Search
                         </Button>

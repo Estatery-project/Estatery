@@ -7,8 +7,8 @@ import FilterState from '@/app/types/FilterEstate'
 import Link from 'next/link'
 import Pagination from '@mui/material/Pagination'
 import Stack from '@mui/material/Stack'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 const Properties = async ({ searchParams }: { searchParams: FilterState }) => {
     const data = await getData(
@@ -69,17 +69,18 @@ const Properties = async ({ searchParams }: { searchParams: FilterState }) => {
                         : 'There is no estate for filtering states'}
                 </div>
 
-                <Stack spacing={2} className='mx-auto mb-10'>
-                    <Pagination count={10} color='primary' 
+                <Stack spacing={2} className="mx-auto mb-10">
+                    <Pagination
+                        count={10}
+                        color="primary"
 
-                    //Add items here
-                    //  renderItem={(item) => (
-                    //     <EstateCard
-                    //       slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
-                    //       {...item}
-                    //     />
-                    //   )}
-                    
+                        //Add items here
+                        //  renderItem={(item) => (
+                        //     <EstateCard
+                        //       slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+                        //       {...item}
+                        //     />
+                        //   )}
                     />
                 </Stack>
             </div>

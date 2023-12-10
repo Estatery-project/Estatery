@@ -17,22 +17,26 @@ const mapOptions = {
 }
 
 const MapComponent = ({ estateData }: any) => {
-    console.log(estateData, 'estateDataaa')
-
-
+    const mapRef = useRef(null)
 
     const [mapContainer, setMapContainer] = useState(null)
-    
-    const onLoad = useCallback((map: any) => addMarkers(map), [])
-    
-    
 
-    useEffect(()=>{
-        trees = estateData?.map((estate: any) => {
-            return [estate.title, estate.latitude, estate.longitude]
-        })
-    },[trees, estateData])
-    
+    const onLoad = useCallback((map: any) => {
+        addMarkers(map)
+        mapRef.current = map
+    }, [])
+
+    trees = estateData?.map((estate: any) => {
+        return [estate.title, estate.latitude, estate.longitude]
+    })
+
+    useEffect(() => {
+        if (mapRef.current) {
+            addMarkers(mapRef.current)
+            setMapContainer(null)
+        }
+    }, [estateData])
+
     return (
         <GoogleMapsProvider
             googleMapsAPIKey="AIzaSyB4wwjaaE2gCMFpsVYErvg1kh-LxE-4v3o"
