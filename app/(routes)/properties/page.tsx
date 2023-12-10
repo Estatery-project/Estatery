@@ -7,8 +7,6 @@ import FilterState from '@/app/types/FilterEstate'
 import Link from 'next/link'
 import Pagination from '@mui/material/Pagination'
 import Stack from '@mui/material/Stack'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 const Properties = async ({ searchParams }: { searchParams: FilterState }) => {
     const data = await getData(
