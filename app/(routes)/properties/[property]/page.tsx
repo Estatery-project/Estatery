@@ -13,7 +13,7 @@ import SimilarEstates from '@/app/components/ui/property/similar-estates'
 import getData from '@/app/services/estatesApi'
 
 export async function generateStaticParams() {
-    const posts = await fetch('http://localhost:8000/estates').then((res) =>
+    const posts = await fetch('https://estate-api-0bne.onrender.com/estates').then((res) =>
         res.json()
     )
     return posts.map((post: any) => ({
