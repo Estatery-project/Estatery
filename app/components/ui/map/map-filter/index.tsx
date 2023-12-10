@@ -122,11 +122,11 @@ const MapFilter = () => {
                                     placeholder="500"
                                     className=" px-2  border-[1px] border-[#000] opacity-[0.7] rounded-lg"
                                     min={0}
-                                    value={selectedFilter.minPrice}
+                                    value={selectedFilter.minPrice?.toString()}
                                     onChange={(e) =>
                                         setSelectedFilter({
                                             ...selectedFilter,
-                                            minPrice: e.target.value,
+                                            minPrice: +e.target.value,
                                         })
                                     }
                                 />
@@ -134,12 +134,12 @@ const MapFilter = () => {
                                     type="number"
                                     placeholder="2500"
                                     className=" px-2  border-[1px] border-[#000] opacity-[0.7] rounded-lg"
-                                    min={+selectedFilter.minPrice + 100}
-                                    value={selectedFilter.maxPrice}
+                                    min={selectedFilter.minPrice!==null ? +selectedFilter.minPrice + 100: ''}
+                                    value={selectedFilter.maxPrice!=null ? +selectedFilter.maxPrice: ''}
                                     onChange={(e) =>
                                         setSelectedFilter({
                                             ...selectedFilter,
-                                            maxPrice: e.target.value,
+                                            maxPrice: +e.target.value,
                                         })
                                     }
                                 />
