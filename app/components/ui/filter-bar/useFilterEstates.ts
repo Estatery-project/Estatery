@@ -16,6 +16,7 @@ export const useFilterEstates = (selectedFilter: any, Enabled: any) => {
                 selectedFilter.propertyType,
                 selectedFilter.location,
                 selectedFilter.type,
+                selectedFilter.bedroom || ''
             ),
             
     })
