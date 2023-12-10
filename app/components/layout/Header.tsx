@@ -7,14 +7,16 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 
 const Header = () => {
-//     const searchParams = useSearchParams()
-//     const type = searchParams.get('type')
-//     const location=searchParams.get('location');
-//     const minPrice=searchParams.get('minPrice');
-//     const maxPrice=searchParams.get('maxPrice');
-//     const propertyType=searchParams.get('propertyType');
-    
-// console.log(type,location,minPrice,maxPrice,propertyType);
+    //     const searchParams = useSearchParams()
+    //     const type = searchParams.get('type')
+    //     const location=searchParams.get('location');
+    //     const minPrice=searchParams.get('minPrice');
+    //     const maxPrice=searchParams.get('maxPrice');
+    //     const propertyType=searchParams.get('propertyType');
+
+    // console.log(type,location,minPrice,maxPrice,propertyType);
+
+    const handlefunc = () => {}
 
     return (
         <header className="bg-white  border-b border-[#E0DEF7] py-4  border-opacity-[0.7] fixed top-0 w-full z-10">
@@ -36,7 +38,7 @@ const Header = () => {
                         >
                             <li>Rent</li>
                         </Link>
-                        
+
                         <Link
                             href={{
                                 pathname: '/buy',
@@ -45,12 +47,11 @@ const Header = () => {
                         >
                             <li>Buy</li>
                         </Link>
-                        
+
                         <li>Sell</li>
                         <Link
                             href={{
                                 pathname: '/properties',
-                               
                             }}
                         >
                             <li>All Properties</li>
@@ -64,10 +65,16 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className=" flex space-x-3">
-                    <Button className="!bg-[#fff] border-[#E0DEF7]  border-[2px] px-6 py-3 !text-[#7065F0]">
+                    <Button
+                        type="button"
+                        className="!bg-[#fff] border-[#E0DEF7]  border-[2px] px-6 py-3 !text-[#7065F0]"
+                    >
                         Log In
                     </Button>
-                    <Button className="px-6 py-3">Sign Up</Button>
+
+                    <Button type="button" className="px-6 py-3">
+                        Sign Up
+                    </Button>
                 </div>
             </div>
         </header>

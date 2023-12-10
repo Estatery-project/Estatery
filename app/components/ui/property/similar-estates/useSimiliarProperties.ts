@@ -9,7 +9,7 @@ export const useSimiliarProperties = (
 ) => {
     const { data, isLoading, error, refetch } = useQuery({
         queryKey: ['similiarProperties'],
-        queryFn: () => getData(propertyType, location, type),
+        queryFn: () => getData(propertyType, location, type,''),
     })
 
     return { data, isLoading, error, refetch }

@@ -2,9 +2,9 @@ import React from 'react'
 
 interface IButton {
     className: string | undefined
-    children: React.ReactNode
+    children: React.ReactNode | undefined
     type: 'submit' | 'reset' | 'button' | undefined
-    onClick: () => void | null
+    onClick?: () => void;
 }
 
 const Button = ({ type, className, children, onClick }: IButton) => {

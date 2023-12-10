@@ -10,7 +10,8 @@ const HomeEstates = async ({ searchParams }: { searchParams: FilterState }) => {
     const data = await getData(
         searchParams?.propertyType,
         searchParams?.location,
-        searchParams?.type
+        searchParams?.type,
+        searchParams.bedroom || '',
     )
 
     return (
