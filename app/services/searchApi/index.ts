@@ -1,5 +1,5 @@
 const getSearchLocations = async (location: string) => {
-    const res = await fetch(`http://localhost:8000/location_like=${location}}`)
+    const res = await fetch(`https://estate-api-0bne.onrender.com/location_like=${location}}`)
     return res.json()
 }
 

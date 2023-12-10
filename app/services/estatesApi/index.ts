@@ -8,7 +8,7 @@ async function getData(
 ) {
     try {
         const res = await fetch(
-            `http://localhost:8000/estates?${type ? `type=${type}` : ''}${
+            `https://estate-api-0bne.onrender.com/estates?${type ? `type=${type}` : ''}${
                 selectedFilter ? `propertyType=${selectedFilter}` : ''
             }${bedroom ? `&bedroom=${bedroom}` : ''}${
                 location ? `&location_like=${location}` : ''

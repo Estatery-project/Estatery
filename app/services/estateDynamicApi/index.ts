@@ -1,6 +1,6 @@
 async function getDynamicData(id: any) {
     try {
-        const res = await fetch(`http://localhost:8000/estates/${id}`);
+        const res = await fetch(`https://estate-api-0bne.onrender.com/estates/${id}`);
         
         if (!res.ok) {
             throw new Error('Failed to fetch data');
