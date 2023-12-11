@@ -1,12 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
 import { PrimeReactProvider } from 'primereact/api'
 import Providers from './providers'
 import 'primereact/resources/themes/lara-light-indigo/theme.css'
-
 import Footer from './components/layout/Footer'
-
 import './globals.css'
 import '/public/assets/fonts/stylesheet.css'
 import Header from './components/layout/Header'
@@ -26,7 +23,7 @@ export default function RootLayout({
         <html lang="en">
             <PrimeReactProvider>
                 <body className={inter.className}>
-                    <Header/>
+                    <Header />
                     <Providers>{children}</Providers>
                     <Footer />
                 </body>

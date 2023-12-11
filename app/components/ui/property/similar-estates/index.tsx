@@ -21,8 +21,12 @@ const SimilarEstates = ({ propertyType, propertyId }: Props) => {
         return <div>Loading...</div>
     }
 
+    if (error) {
+        return <div>Data not found!</div>
+    }
+
     const filteredData = similiarEstateData.filter(
-        (estate: Estate) => estate.id !== propertyId
+        (estate: Estate) => estate?.id !== propertyId
     )
     return (
         <section className="bg-[#F7F7FD] px-32 py-16 mt-16">

@@ -22,6 +22,10 @@ const ImageGalleryComponent = ({
     images,
 }: ImageGalleryComponentProps) => {
 
+    if(baseImg === undefined || images === undefined){
+        return <div>Not Found</div>
+    }
+
     return (
         <LightGallery
             elementClassNames="grid grid grid-cols-3 gap-x-8 gap-y-4 "

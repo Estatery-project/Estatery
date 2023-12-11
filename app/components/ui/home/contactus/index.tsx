@@ -2,7 +2,8 @@ import Button from '../../Button'
 
 const HomeContact = () => {
     return (
-        <section className="bg-midnight flex items-center justify-center pt-[64px] pb-[80px]  ">
+      
+       <section className="bg-midnight flex items-center justify-center pt-[64px] pb-[80px]  ">
             <div className="flex flex-col justify-between h-[280px] items-center">
                 <h3 className="text-[24px] font-[700] text-indigo">
                     No Spam Promise
@@ -35,6 +36,7 @@ const HomeContact = () => {
                 </p>
             </div>
         </section>
+        
     )
 }
 

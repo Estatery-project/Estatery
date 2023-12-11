@@ -59,6 +59,7 @@ const Properties = async ({ searchParams }: { searchParams: FilterState }) => {
                               //change type to Estate here
                               return (
                                   <EstateCard
+                                  className='border-[1.5px] border-[#F0EFFB] rounded-[8px]'
                                       key={estate.id}
                                       estateData={estate}
                                       infoText={true}

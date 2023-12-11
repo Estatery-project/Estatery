@@ -11,7 +11,7 @@ const HomeEstates = async ({ searchParams }: { searchParams: FilterState }) => {
         searchParams?.propertyType,
         searchParams?.location,
         searchParams?.type,
-        searchParams.bedroom || '',
+        searchParams.bedroom || ''
     )
 
     return (
@@ -30,9 +30,9 @@ const HomeEstates = async ({ searchParams }: { searchParams: FilterState }) => {
                     <div>
                         <Button
                             type="button"
-                            className="px-8 py-4" //Properties params should be Link from this page 
+                            className="px-8 py-4" //Properties params should be Link from this page
                         >
-                            Browse more properties 
+                            Browse more properties
                         </Button>
                     </div>
                 </div>

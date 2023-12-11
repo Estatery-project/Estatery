@@ -3,6 +3,7 @@ import { HeroStartingMarkerIcon, MarkerIcon } from '@/public/assets/icons/icons'
 
 export default function Hero() {
     return (
+    
         <section className="bg-purple-50 bg-hero-pattern bg-right bg-no-repeat pt-16">
             <div className="mb-10 container flex mx-auto items-center space-x-20">
                 <div className="flex flex-col gap-8 py-[72px] w-[45%] relative">
@@ -67,5 +68,6 @@ export default function Hero() {
                 </div>
             </div>
         </section>
+
     )
 }

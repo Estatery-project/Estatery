@@ -21,6 +21,7 @@
     "dayjs": "^1.11.10",
     "lightgallery": "^2.7.2",
     "next": "13.5.4",
+    "next-auth": "^4.24.5",
     "primereact": "^10.2.1",
     "react": "^18",
     "react-dom": "^18",

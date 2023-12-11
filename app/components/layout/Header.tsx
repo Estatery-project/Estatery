@@ -65,16 +65,19 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className=" flex space-x-3">
-                    <Button
-                        type="button"
-                        className="!bg-[#fff] border-[#E0DEF7]  border-[2px] px-6 py-3 !text-[#7065F0]"
+                    <Link
+                        href="/auth/signin"
+                        className="!bg-[#fff] border-[#E0DEF7] rounded-[8px] border-[2px] px-6 py-3 !text-[#7065F0]"
                     >
                         Log In
-                    </Button>
+                    </Link>
 
-                    <Button type="button" className="px-6 py-3">
+                    <Link
+                        href="/register"
+                        className="px-6 py-3 text-white bg-indigo  rounded-[8px] text-4 font-[700]"
+                    >
                         Sign Up
-                    </Button>
+                    </Link>
                 </div>
             </div>
         </header>

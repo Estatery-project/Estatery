@@ -170,8 +170,8 @@ const Property = async ({ params }: { params: any }) => {
                 {/* Similar Properties start */}
             </div>
             <SimilarEstates
-                propertyType={data.propertyType}
-                propertyId={data.id}
+                propertyType={data?.propertyType}
+                propertyId={data?.id}
                 // type={data.type}
                 // location={data.location}
                 // numb={2}
