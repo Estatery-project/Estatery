@@ -24,22 +24,23 @@ const MapSearch = ({ Data }: any) => {
         )
     }, [query, router])
 
-
     const handleInputChange = (e: any) => {
         setSearchTerm(e.target.value)
     }
 
     return (
-        <form className="relative">
-            <input
-                value={searchTerm}
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Search Location"
-                className="border-[2px] rounded-[8px] w-full py-2 px-10 border-[#E0DEF7]"
-            />
-            <GlassIcon className="absolute top-3 left-3" />
-        </form>
+        <div>
+            <form className="relative">
+                <input
+                    value={searchTerm}
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="Search Location"
+                    className="border-[2px] rounded-[8px] w-full py-2 px-10 border-[#E0DEF7]"
+                />
+                <GlassIcon className="absolute top-3 left-3" />
+            </form>
+        </div>
     )
 }
 

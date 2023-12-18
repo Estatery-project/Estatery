@@ -3,10 +3,11 @@ import { Inter } from 'next/font/google'
 import { PrimeReactProvider } from 'primereact/api'
 import Providers from './providers'
 import 'primereact/resources/themes/lara-light-indigo/theme.css'
-import Footer from './components/layout/Footer'
+import Footer from './components/layouts/Footer'
 import './globals.css'
 import '/public/assets/fonts/stylesheet.css'
-import Header from './components/layout/Header'
+import Header from './components/layouts/Header'
+import SessionProviders from './sessionproviders'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -22,10 +23,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <PrimeReactProvider>
-                <body className={inter.className}>
-                    <Header />
-                    <Providers>{children}</Providers>
-                    <Footer />
+                {' '}
+                <body>
+                    <SessionProviders>
+                        {' '}
+                        <Header />
+                        <Providers>{children}</Providers>
+                        <Footer />{' '}
+                    </SessionProviders>
                 </body>
             </PrimeReactProvider>
         </html>

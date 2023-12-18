@@ -1,11 +1,11 @@
+'use client'
+
 import Image from 'next/image'
 
 function Navigation() {
     return (
         <div>
             <div>
-                <figure></figure>
-
                 <ul className="d-flex">
                     <li>Rent</li>
                     <li>Buy</li>

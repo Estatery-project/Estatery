@@ -28,6 +28,6 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         "app/components/ui/map/index.jsx"
-    ],
+, "app/components/ui/map/index.js"    ],
     "exclude": ["node_modules"]
 }

@@ -10,12 +10,14 @@ import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 import AuthInput from '@/app/components/ui/auth/auth-input'
 
-const SignIn = () => {
+const SignUp = () => {
     const router = useRouter()
     const [loading, setLoading] = useState(false)
     const [formValues, setFormValues] = useState({
+        name: '',
         email: '',
         password: '',
+        isManager: false,
     })
     const [error, setError] = useState('')
 
@@ -23,42 +25,41 @@ const SignIn = () => {
     const callbackUrl = searchParams.get('callbackUrl') || '/'
 
     const onSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-        try {
-            setLoading(true)
-            setFormValues({ email: '', password: '' })
+        e.preventDefault();
 
-            const res = await signIn('credentials', {
-                redirect: false,
-                email: formValues.email,
-                password: formValues.password,
-                // callbackUrl,
-            })
-
-            setLoading(false)
-
-            // console.log(res)
-            if (!res?.error) {
-                router.push(callbackUrl)
-            } else {
-                setError('Invalid email or password')
-            }
-        } catch (error: any) {
-            setLoading(false)
-            setError(error)
+        if(formValues.password.length < 8) {
+            setError('Password must be at least 8 characters long');
+            return;
         }
+
+
+        try {
+            const response = await fetch('https://estate-api-0bne.onrender.com/users', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formValues),
+            });
+      
+            if (response.ok) {
+              // Handle successful signup, maybe redirect or show a success message
+              console.log('Signup successful');
+              router.push('/auth/signin');
+            } else {
+              // Handle errors if the signup fails
+              alert('Error signing up.');
+            }
+          } catch (error) {
+            console.error('Error occurred during signup:', error);
+          }
     }
 
-    // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     const { name, value } = event.target
-    //     setFormValues({ ...formValues, [name]: value })
-    // }
-
     return (
-        <div className="flex overflow-hidden justify-between w-[100%]">
+        <div className="flex overflow-hidden justify-between w-[100%] ">
             {/* <div className="flex justify-center items-center"></div> */}
 
-            <div className=" h-[100vh] relative w-[50%] bg-[#\] flex flex-col justify-center overflow-hidden  items-center">
+            <div className=" h-[100vh] relative w-[50%] bg-[#\] flex flex-col justify-center overflow-hidden  items-center pt-10">
                 <div className="absolute top-0 left-0 border-b-[1.5px] w-full p-6  border-[#F0EFFB]">
                     <Link href="/">
                         <MainLogo />
@@ -80,24 +81,16 @@ const SignIn = () => {
                     className="flex flex-col items-center w-full max-w-[352px]  "
                 >
                     <div className="flex flex-col items-center w-full max-w-[352px]  space-y-4">
-                        {/* <div className="flex flex-col w-full ">
-                            <label
-                                htmlFor="email"
-                                className="text-[#000929] font-[500] text-[14px] mb-2"
-                            >
-                                Email
-                            </label>
-                            <input
-                                className="rounded-[8px] w-full border-[1.5px] px-4 py-2 border-[#E0DEF7] bg-[#F7F7FD]"
-                                type="email"
-                                name="email"
-                                id="email"
-                                placeholder="hi@example.com"
-                                value={formValues?.email}
-                                onChange={handleChange}
-                            />
-                        </div> */}
-
+                        <AuthInput
+                            error={null}
+                            formValues={formValues}
+                            setFormValues={setFormValues}
+                            type="name"
+                            name="name"
+                            id="name"
+                            placeholder="Full Name"
+                            labelText="Name"
+                        />
 
                         <AuthInput
                             error={null}
@@ -119,25 +112,45 @@ const SignIn = () => {
                             placeholder="******"
                             labelText="Password"
                         />
-
+                        <AuthInput
+                            error={null}
+                            formValues={formValues}
+                            setFormValues={setFormValues}
+                            type="checkbox"
+                            name="isManager"
+                            id="checkbox"
+                            placeholder=""
+                            labelText="I am a property manager"
+                        />
                     </div>
 
-                    <Link href="/" className="text-[#7065F0] mt-4">
-                        Forgot Password?
-                    </Link>
+                    <div className="flex items-center mt-3 justify-between w-full">
+                        <p className="text-[#6C727F] opacity-[0.7] whitespace-nowrap text-[14px]">
+                            At least 8 characters.
+                        </p>
+                        <Link
+                            href="/"
+                            className="text-[#7065F0]  whitespace-nowrap"
+                        >
+                            Forgot Password?
+                        </Link>
+                    </div>
 
                     <Button type="submit" className="px-4 py-2 w-full mt-8">
-                        Login
+                        Sign Up
                     </Button>
                 </form>
 
                 <p className="mt-4">
                     <span className="text-[#000929] opacity-[0.5] font-[500]">
                         {' '}
-                        Don't have an account?{' '}
+                        Already have an account?{' '}
                     </span>
-                    <Link href="/auth/signup" className="font-bold opacity-1 underline">
-                        Sign up for free
+                    <Link
+                        href="/auth/signin"
+                        className="font-bold opacity-1 underline"
+                    >
+                        Login
                     </Link>
                 </p>
             </div>
@@ -157,4 +170,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default SignUp

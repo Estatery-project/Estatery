@@ -8,6 +8,9 @@ import ListEstates from '@/app/components/futures/estates/estates-list'
 import { Suspense } from 'react'
 import FilterState from '@/app/types/FilterEstate'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+
+const RootLayout = dynamic(() => import('../../layout'), { ssr: false })
 
 const page = async ({ searchParams }: { searchParams: FilterState }) => {
     const { type } = searchParams

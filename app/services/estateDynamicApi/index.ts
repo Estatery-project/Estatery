@@ -1,17 +1,18 @@
 async function getDynamicData(id: any) {
     try {
-        const res = await fetch(`https://estate-api-0bne.onrender.com/estates/${id}`);
-        
+        const res = await fetch(
+            `https://estate-api-0bne.onrender.com/estates/${id}`
+        )
+
         if (!res.ok) {
-            throw new Error('Failed to fetch data');
+            throw new Error('Failed to fetch data')
         }
 
-        const data = await res.json(); 
-        return data;
+        const data = await res.json()
+        return data
     } catch (error: any) {
-        throw new Error(error.message);
-        
+        throw new Error(error.message)
     }
 }
 
-export default getDynamicData;
+export default getDynamicData
