@@ -12,7 +12,7 @@ async function getUsers() {
     const data = await response.json()
     return data
 }
-export const authOptions: NextAuthOptions = {
+ const authOptions: NextAuthOptions = {
     providers: [
         CredentialsProvider({
             name: 'Credentials',
