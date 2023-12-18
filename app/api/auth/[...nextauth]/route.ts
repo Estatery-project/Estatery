@@ -24,7 +24,7 @@ export const authOptions: NextAuthOptions = {
                 try {
                     const users = await getUsers()
                     const user = users.find(
-                        (item) => item.email === credentials?.email
+                        (item:any) => item.email === credentials?.email
                     )
 
                     if (user?.password === credentials?.password) {
