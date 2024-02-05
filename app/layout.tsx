@@ -8,6 +8,8 @@ import './globals.css'
 import '/public/assets/fonts/stylesheet.css'
 import Header from './components/layouts/Header'
 import SessionProviders from './sessionproviders'
+import { ReduxProvider } from './store/reduxprovider'
+import { store } from './store/store'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -26,10 +28,11 @@ export default function RootLayout({
                 {' '}
                 <body>
                     <SessionProviders>
-                        {' '}
-                        <Header />
-                        <Providers>{children}</Providers>
-                        <Footer />{' '}
+                        <ReduxProvider>
+                            <Header />
+                            <Providers>{children}</Providers>
+                            <Footer />
+                        </ReduxProvider>
                     </SessionProviders>
                 </body>
             </PrimeReactProvider>

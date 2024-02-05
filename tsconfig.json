@@ -28,6 +28,6 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         "app/components/ui/map/index.jsx"
-, "app/components/ui/map/index.js"    ],
+, "app/components/ui/map/index.js", "app/store/reduxprovider.js"    ],
     "exclude": ["node_modules"]
 }

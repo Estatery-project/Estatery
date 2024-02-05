@@ -140,14 +140,14 @@ const EstatePopularity = ({ className }: any) => {
     )
 }
 
-const HeartLogo = ({ className }: any) => {
+const HeartLogo = ({ className, fill }: any) => {
     return (
         <svg
             className={className}
             width="48"
             height="48"
             viewBox="0 0 48 48"
-            fill="none"
+            fill={fill || 'none'}
             xmlns="http://www.w3.org/2000/svg"
         >
             <circle
@@ -1187,7 +1187,7 @@ const HomeHeroIcon = () => {
     )
 }
 
-const ArrowRigtIcon = ({className, stroke}:any) => {
+const ArrowRigtIcon = ({ className, stroke }: any) => {
     return (
         <svg
             className={className}
@@ -1578,9 +1578,10 @@ const ShareIcon = ({ children }: any) => {
     )
 }
 
-const FavoriteIcon = ({ children }: any) => {
+const FavoriteIcon = ({ className }: any) => {
     return (
         <svg
+            className={className}
             width="16"
             height="16"
             viewBox="0 0 16 16"
@@ -1805,6 +1806,109 @@ const DropDownIcon = ({ className }: any) => {
     )
 }
 
+const ProfileIcon = ({ className }: any) => {
+    return (
+        <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M10.0002 9.99935C12.3013 9.99935 14.1668 8.13387 14.1668 5.83268C14.1668 3.5315 12.3013 1.66602 10.0002 1.66602C7.69898 1.66602 5.8335 3.5315 5.8335 5.83268C5.8335 8.13387 7.69898 9.99935 10.0002 9.99935Z"
+                stroke="#6C727F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M17.1585 18.3333C17.1585 15.1083 13.9501 12.5 10.0001 12.5C6.05013 12.5 2.8418 15.1083 2.8418 18.3333"
+                stroke="#6C727F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    )
+}
+
+const LogOutIcon = ({ className }: any) => {
+    return (
+        <svg
+            className={className}
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M7.4165 6.29922C7.67484 3.29922 9.2165 2.07422 12.5915 2.07422H12.6998C16.4248 2.07422 17.9165 3.56589 17.9165 7.29089V12.7242C17.9165 16.4492 16.4248 17.9409 12.6998 17.9409H12.5915C9.2415 17.9409 7.69984 16.7326 7.42484 13.7826"
+                stroke="#6C727F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M12.4999 10H3.0166"
+                stroke="#6C727F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M4.87516 7.20898L2.0835 10.0007L4.87516 12.7923"
+                stroke="#6C727F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    )
+}
+
+const HelpIcon = ({ className }: any) => {
+    return (
+        <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g clip-path="url(#clip0_355_9510)">
+                <path
+                    d="M9.99984 18.3327C14.5832 18.3327 18.3332 14.5827 18.3332 9.99935C18.3332 5.41602 14.5832 1.66602 9.99984 1.66602C5.4165 1.66602 1.6665 5.41602 1.6665 9.99935C1.6665 14.5827 5.4165 18.3327 9.99984 18.3327Z"
+                    stroke="#6C727F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M7.5 7.70786C7.5 7.21087 7.73033 6.73425 8.14032 6.38283C8.55031 6.03141 9.10637 5.83398 9.68618 5.83398H10.3108C10.8906 5.83398 11.4467 6.03141 11.8567 6.38283C12.2667 6.73425 12.497 7.21087 12.497 7.70786C12.52 8.1134 12.4106 8.51543 12.1853 8.8534C11.96 9.19137 11.6309 9.44698 11.2477 9.58173C10.8646 9.76139 10.5355 10.1022 10.3102 10.5528C10.0849 11.0035 9.9755 10.9149 9.9985 11.4556"
+                    stroke="#6C727F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M9.99854 14.5781V14.5844"
+                    stroke="#6C727F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </g>
+            <defs>
+                <clipPath id="clip0_355_9510">
+                    <rect width="20" height="20" fill="white" />
+                </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
 export {
     MainLogo,
     FacebookIcon,
@@ -1836,4 +1940,7 @@ export {
     HeaderLogoIcon,
     DropDownIcon,
     HeroStartingMarkerIcon,
+    ProfileIcon,
+    LogOutIcon,
+    HelpIcon,
 }

@@ -6,18 +6,20 @@ import getData from '@/app/services/estatesApi'
 import EstateCard from '../estate-card'
 import Estate from '@/app/types/Estate'
 
-interface EstateListProps{
-    searchParams: FilterState,
+interface EstateListProps {
+    searchParams: FilterState
     className?: string
 }
 
-const EstatesList = async ({searchParams, className}: EstateListProps) => {
+const EstatesList = async ({ searchParams, className }: EstateListProps) => {
     const data = await getData(
         searchParams?.propertyType,
         searchParams?.location,
         searchParams?.type,
-        searchParams?.bedroom || '',
+        searchParams?.bedroom || ''
     )
+
+    console.log(data, 'data')
 
     return (
         <div className={`${className}`}>
@@ -25,7 +27,11 @@ const EstatesList = async ({searchParams, className}: EstateListProps) => {
                 {data.length > 0
                     ? data?.map((estate: Estate) => {
                           return (
-                              <EstateCard key={estate.id} estateData={estate}  infoText={true}/>
+                              <EstateCard
+                                  key={estate.id}
+                                  estateData={estate}
+                                  infoText={true}
+                              />
                           )
                       })
                     : 'There is no estate for filtering states'}

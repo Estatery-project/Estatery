@@ -9,6 +9,7 @@ import {
 } from '@/public/assets/icons/icons'
 
 import Estate from '@/app/types/Estate'
+import FavoriteActions from '@/app/components/ui/favoriteaction'
 
 type EstateCardProps = {
     estateData: Estate
@@ -20,7 +21,7 @@ const EstateCard = ({ estateData, className, infoText }: EstateCardProps) => {
     console.log(estateData, 'estateData')
 
     return (
-        <div className={`text-blue-black  ${className}`}>
+        <div className={`text-blue-black   ${className}`}>
             <Link href={`/properties/${estateData.id}`}>
                 <div className="relative">
                     {/* <img
@@ -54,7 +55,9 @@ const EstateCard = ({ estateData, className, infoText }: EstateCardProps) => {
                     <p className="text-[16px] opacity-[0.5]">
                         {estateData?.location}
                     </p>
-                    <HeartLogo className="absolute right-0 top-4 cursor-pointer" />
+
+                    {/* <HeartLogo className="absolute right-0 top-4 cursor-pointer" /> */}
+                    <FavoriteActions estateData={estateData} className="absolute right-0 top-4 cursor-pointer" />
                 </div>
 
                 <div className="flex flex-col pb-4">
