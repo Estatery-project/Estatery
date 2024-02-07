@@ -20,8 +20,20 @@ type EstateCardProps = {
 const EstateCard = ({ estateData, className, infoText }: EstateCardProps) => {
     console.log(estateData, 'estateData')
 
+    function truncateSentence(sentence:any) {
+        const words = sentence.split(' ');
+        if (words.length <= 4) {
+          return sentence;
+        } else {
+          const truncatedWords = words.slice(0, 4);
+          return truncatedWords.join(' ') + '...';
+        }
+      }
+      const originalSentence = estateData?.title;
+      const truncatedTitle = truncateSentence(originalSentence);
+
     return (
-        <div className={`text-blue-black   ${className}`}>
+        <div className={`text-blue-black  ${className}`}>
             <Link href={`/properties/${estateData.id}`}>
                 <div className="relative">
                     {/* <img
@@ -37,7 +49,7 @@ const EstateCard = ({ estateData, className, infoText }: EstateCardProps) => {
                 </div>
             </Link>
 
-            <div className="bg-white px-4 rounded-b-xl ">
+            <div className="bg-white px-4 rounded-b-xl   flex flex-col ">
                 <div className="relative flex flex-col justify-between pt-8 space-y-2 py-1">
                     <p className="text-indigo text-[24px] font-[800] ">
                         {estateData?.price}$
@@ -50,7 +62,7 @@ const EstateCard = ({ estateData, className, infoText }: EstateCardProps) => {
                         </span>
                     </p>
                     <span className="text-[24px] font-[700]">
-                        {estateData?.title}
+                        {truncatedTitle}
                     </span>
                     <p className="text-[16px] opacity-[0.5]">
                         {estateData?.location}
@@ -62,8 +74,8 @@ const EstateCard = ({ estateData, className, infoText }: EstateCardProps) => {
 
                 <div className="flex flex-col pb-4">
                     <hr className="border-purple-100 border-[1.5px] my-3" />
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center space-x-2">
+                    <div className="flex justify-between items-center ">
+                        <div className="flex items-center space-x-2 align-end">
                             <BedIcon />
                             <span className="opacity-[0.7] text-[14px]">
                                 {estateData?.bedroom} {infoText ? 'Beds' : ''}

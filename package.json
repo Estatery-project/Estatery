@@ -19,6 +19,7 @@
     "@tanstack/react-query-devtools": "^5.12.2",
     "@types/redux": "^3.6.0",
     "dayjs": "^1.11.10",
+    "json-server-relationship": "^0.14.5",
     "lightgallery": "^2.7.2",
     "next": "13.5.4",
     "next-auth": "^4.24.5",

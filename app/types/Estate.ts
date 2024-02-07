@@ -33,6 +33,15 @@ declare interface Estate {
         lotSize: number
         city: string
     }
+        estateManagers: {
+        id:number,
+        name:string,
+        number:string,
+        image:string,
+        isAgencyMember: boolean,
+        agencyName:string | null,
+        estateId:number
+        }[] | null
 }
 
 export default Estate

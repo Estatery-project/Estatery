@@ -1,7 +1,7 @@
 async function getDynamicData(id: any) {
     try {
         const res = await fetch(
-            `https://estate-api-0bne.onrender.com/estates/${id}`
+            `https://estate-api-0bne.onrender.com/estates/${id}?_embed=estateManagers`
         )
 
         if (!res.ok) {
