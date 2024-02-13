@@ -3,18 +3,18 @@ import { Avatar } from 'primereact/avatar'
 
 
 type estateManagerProps = {
-    id:number,
-    name:string,
-    number:string,
-    image:string,
-    isAgencyMember: boolean,
-    agencyName:string | null,
-    estateId:number
+    id?:number,
+    name?:string,
+    number?:string,
+    image?:string,
+    isAgencyMember?: boolean,
+    agencyName?:string | null,
+    estateManager?: any | null,
+    estateId?:number
 }
 
-const Owner = ({estateManager}: estateManagerProps) => {
-
-    console.log(estateManager, 'estateManager');
+const Owner = ({estateManager}: { estateManager: estateManagerProps | null }) => {
+  
     const  {id, name, image, number, isAgencyMember, agencyName } = estateManager || {}
 
     return (

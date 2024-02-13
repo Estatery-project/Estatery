@@ -35,6 +35,9 @@ const Property = async ({ params }: { params: any }) => {
         lng: data?.longitude,
     }
 
+    console.log(data, 'data');
+    
+
     return (
         <section className="">
             <div className="container mx-auto flex flex-col pt-16">
@@ -107,7 +110,7 @@ const Property = async ({ params }: { params: any }) => {
                             status={false}
                         />
                         <AboutEstate />
-                        <Owner estateManager={data?.estateManagers[0]} />
+                        <Owner estateManager={data?.estateManagers  && data?.estateManagers[0]} />
                         <RentalFeatures
                             rentalFeaturesData={data?.rentalFeatures}
                         />
