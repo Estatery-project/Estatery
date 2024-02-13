@@ -3,13 +3,13 @@ import { Avatar } from 'primereact/avatar'
 const Testimonials = () => {
     return (
         <section className="w-full bg-custom-gradient-index py-20">
-            <div className="text-blue-black flex flex-col justify-between items-center max-w-[736px] mx-auto h-[380px] ">
-                <h1 className="text-[40px] font-[700]">Testimonials</h1>
-                <p className="font-[16px] font-400 opacity-[0.7]">
+            <div className="text-blue-black flex flex-col justify-between items-center text-center xl:text-start px-4 xl:px-0 gap-y-4 xl:gap-y-0 max-w-[736px] mx-auto h-[380px] ">
+                <h1 className="text-3xl xl:text-[40px] font-[700]">Testimonials</h1>
+                <p className="font-[14px] xl:font-[16px] font-400 opacity-[0.7]">
                     See what our property managers, landlords, and tenants have
                     to say
                 </p>
-                <p className="text-[20px]">
+                <p className="  text-sm xl xl:text-[20px]">
                     “Estatery is the platform I go to on almost a daily basis
                     for 2nd home and vacation condo shopping, or to just look at
                     dream homes in new areas. Thanks for fun home shopping and

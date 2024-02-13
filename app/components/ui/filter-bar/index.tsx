@@ -11,6 +11,7 @@ import { useFilterEstates } from './useFilterEstates'
 import FilterState from '@/app/types/FilterEstate'
 import Estate from '@/app/types/Estate'
 import Button from '../Button'
+import { GlassIcon, SeacrhIcon } from '@/public/assets/icons/icons'
 
 export interface FilterBarProps {
     className?: string
@@ -20,6 +21,7 @@ export interface FilterBarProps {
     price: boolean
     propertyType: boolean
     type: boolean
+    mobileSearch?: boolean
 }
 
 const FilterBar = ({
@@ -30,6 +32,7 @@ const FilterBar = ({
     when,
     propertyType,
     type,
+    mobileSearch
 }: FilterBarProps) => {
     const [selectedFilter, setSelectedFilter] = useState<FilterState>({
         type: '',
@@ -108,7 +111,7 @@ const FilterBar = ({
         <div>
             {type && (
                 <div>
-                    <div className="flex justify-between items-center max-w-[150px]">
+                    <div className="flex justify-between items-center xl:max-w-[150px]">
                         <div
                             className={`bg-[#fff] px-8 py-3 cursor-pointer  rounded-tl-[8px] ${
                                 selectedFilter.type == 'rent'
@@ -202,7 +205,7 @@ const FilterBar = ({
                         </div>
                     )}
                     {when && (
-                        <div className="max-w-[180px]">
+                        <div className="max-w-[180px] hidden xl:block">
                             <div className="flex flex-col items-start gap-y-2">
                                 <div>
                                     {' '}
@@ -333,16 +336,17 @@ const FilterBar = ({
                         </div>
                     )}
 
-                    <div className="flex space-x-3 items-center">
-                        <Link
+                    <div className="flex flex-col xl:flex-row space-y-2 xl:space-y-0 space-x-3 items-center">
+                       <Link
                             href="/map"
-                            className="px-8 py-4 text-[#7065F0] bg-[#E8E6F9]  rounded-[8px] font-[700]"
+                            className="hidden xl:block px-8 py-4 text-[#7065F0] bg-[#E8E6F9]  rounded-[8px] font-[700]"
                         >
                             Map
                         </Link>
 
-                        <Button type="submit" className="px-8 py-4">
-                            Search
+                        <Button type="submit" className=" xl:px-8 xl:py-4  p-4">
+                           <span className="hidden xl:block">Search</span>
+                           <SeacrhIcon className="block xl:hidden"/>
                         </Button>
                     </div>
                 </form>

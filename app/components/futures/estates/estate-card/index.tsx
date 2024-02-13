@@ -41,7 +41,7 @@ const EstateCard = ({ estateData, className, infoText }: EstateCardProps) => {
                         src={estateData?.baseImg}
                     /> */}
                     <img
-                        className="w-[352px] h-[235px] object-cover rounded-t-lg"
+                        className="w-full xl:w-[352px] xl:h-[235px]  object-cover rounded-t-lg"
                         src={estateData?.baseImg}
                         alt={estateData?.title}
                     />

@@ -4,13 +4,13 @@ import { HeroStartingMarkerIcon, MarkerIcon } from '@/public/assets/icons/icons'
 export default function Hero() {
     return (
     
-        <section className="bg-purple-50 bg-hero-pattern bg-right bg-no-repeat pt-16">
-            <div className="mb-10 container flex mx-auto items-center space-x-20">
-                <div className="flex flex-col gap-8 py-[72px] w-[45%] relative">
-                    <h1 className="text-5xl text-blue-black min-w-[544px]">
+        <section className="bg-purple-50 xl:bg-hero-pattern bg-none bg-right bg-no-repeat pt-16">
+            <div className="mb-10 container flex mx-auto items-center justify-center xl:justify-start space-x-20">
+                <div className="flex flex-col items-center justify-center xl:justify-start gap-8 py-[72px] xl:w-[45%] relative">
+                    <h1 className= "text-3xl px-4  xl:text-5xl text-blue-black xl:min-w-[544px] xl:text-start text-center">
                         Buy, rent, or sell your property easily
                     </h1>
-                    <p className="text-xl  text-blue-black font-medium leading-8">
+                    <p className="text-xl text-center xl:text-start px-2 xl:px-0 text-blue-black font-medium leading-8">
                         A great platform to buy, sell, or even rent your
                         properties without any commisions.
                     </p>
@@ -28,19 +28,19 @@ export default function Hero() {
                             </span>
                         </div>
                     </div>
-                    <div className="w-full">
+                    <div className="w-full flex  justify-center align-center xl:justify-start">
                         <FilterBar
                             type={true}
                             propertyType={false}
                             when={true}
                             location={true}
                             price={false}
-                            className="absolute xl:w-[600px]"
+                            className="absolute  w-[250px] xl:w-[600px]"
                         />
                     </div>
                 </div>
 
-                <div>
+                <div className='hidden xl:block'>
                     <img
                         src="../../../../assets/images/home-cart.png"
                         alt=""
@@ -48,7 +48,7 @@ export default function Hero() {
                     />
                 </div>
 
-                <div className="flex flex-col space-y-12">
+                <div className="hidden xl:flex flex-col space-y-12 ">
                     <div className='relative mt-14'>
                     <HeroStartingMarkerIcon className=" top-[-15px] left-[-22px] bottom-0  absolute "/>
                         <img
@@ -63,7 +63,7 @@ export default function Hero() {
                     <img
                         src="../../../../assets/images/2.png"
                         alt=""
-                        className="pb-4"
+                        className="hidden xl:block pb-4"
                     />
                 </div>
             </div>

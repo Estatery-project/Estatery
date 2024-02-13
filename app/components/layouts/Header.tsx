@@ -1,9 +1,11 @@
 'use client'
 
-import React, { use } from 'react'
+import React, { useState } from 'react'
 import {
+    CloseHamburgerMenuIcon,
     DropDownIcon,
     FavoriteIcon,
+    HamburgerMenuIcon,
     HeaderLogoIcon,
     HeartLogo,
 } from '@/public/assets/icons/icons'
@@ -27,18 +29,24 @@ const Header = () => {
     const pathname = usePathname()
     const { data } = useSession()
     const favorite = useSelector((state: any) => state?.favorites?.items)
+    const [openMenu, setOpenMenu] = useState<boolean>(false)
+
+    const handleOpenMobileMenu = () => {
+        setOpenMenu(!openMenu)
+    }
+
     return (
         <div className="">
             {pathname != '/auth/signin' && pathname !== '/auth/signup' && (
-                <div className="bg-white  border-b border-[#E0DEF7] py-4  border-opacity-[0.7] fixed top-0 w-full z-10">
-                    <div className="xl:max-w-[1280px] md:container mx-auto flex justify-between items-center">
-                        <Link href="/">
+                <div className="bg-[#fff]   border-b border-[#E0DEF7] xl:py-4  border-opacity-[0.7] fixed top-0 w-full z-[40] ">
+                    <div className={`xl:max-w-[1280px]  z-[40] md:container mx-auto flex justify-between items-center whitespace-nowrap p-4 xl:p-0`}>
+                        <Link href="/"  onClick={()=>  setOpenMenu(false)}>
                             <HeaderLogoIcon />
                         </Link>
 
-                        <div>
-                            <ul className="flex gap-x-12 items-center text-[16px] font-[500] text-[#000929]">
-                                <li>
+                        <div className=" xl:block absolute xl:static z-[-10] xl:z-[50] bg-[#fff]  w-full  bottom-0 left-0 ">
+                            <ul className={ `${openMenu ? 'translate-y-[100%] w-full transition-all duration-50 ':' translate-y-[-100%] z-[10] xl:z-[70] transition-all duration-50'}  xl:z-[70] xl:translate-y-[0] flex space-y-4 xl:space-y-0 flex-col bg-[#fff] px-8 py-2   xl:flex-row gap-x-12 xl:items-center text-[16px] font-[500] text-[#000929] `}>
+                                <li className='text-[]' onClick={()=>  setOpenMenu(false)}>
                                     {' '}
                                     <Link
                                         prefetch={true}
@@ -46,18 +54,20 @@ const Header = () => {
                                             pathname: '/buy',
                                             query: { type: 'rent' },
                                         }}
+                                        
                                     >
                                         Rent
                                     </Link>
                                 </li>
 
-                                <li>
+                                <li onClick={()=>  setOpenMenu(false)}>
                                     {' '}
                                     <Link
                                         href={{
                                             pathname: '/buy',
                                             query: { type: 'buy' },
                                         }}
+                                      
                                     >
                                         Buy
                                     </Link>
@@ -84,7 +94,7 @@ const Header = () => {
                             </ul>
                         </div>
 
-                        <div className=" flex space-x-3">
+                        <div className="hidden  xl:flex space-x-3">
                             {!data?.user ? (
                                 <Link
                                     href="/auth/signin"
@@ -129,6 +139,13 @@ const Header = () => {
                                     </Link>
                                 </div>
                             )}
+                        </div>
+
+                        <div
+                            className="xl:hidden"
+                            onClick={handleOpenMobileMenu}
+                        >
+                         {!openMenu ?  <HamburgerMenuIcon /> : <CloseHamburgerMenuIcon />}
                         </div>
                     </div>
                 </div>

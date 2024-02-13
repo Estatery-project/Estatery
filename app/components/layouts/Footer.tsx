@@ -18,11 +18,11 @@ const Footer = () => {
             {pathname != '/auth/signin' && pathname !=='/auth/signup' && (
                 <section className="flex justify-center items-center   mx-auto relative  bottom-0 w-full ">
                     <footer className="container flex flex-col justify-center items-center  ">
-                        <div className="flex justify-between w-full py-20">
-                            <div className="">
+                        <div className="flex flex-col xl:flex-row gap-y-16 xl:gap-y-0 justify-between w-full py-20">
+                            <div className="px-4 xl:px-0">
                                 <MainLogo />
                             </div>
-                            <div className="grid grid-cols-3 gap-x-40 gap-y-9">
+                            <div className="grid grid-cols-2 xl:grid-cols-3 gap-x-4 xl:gap-x-40 gap-y-9 px-4 xl:px-0">
                                 <div className="flex flex-col text-4">
                                     <h1 className="font-[700] pb-4">
                                         SELL A HOME
